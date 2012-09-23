@@ -1,0 +1,40 @@
+<%- model_class = Obform -%>
+<div class="page-header">
+  <h1>უახლესი დარეკვები</h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>სახელი</th>
+      <th>გვარი</th>
+      <th>ოლქის სახელი</th>
+      <th>უბნის ნომერი</th>
+      <th>შექმნის თარიღი</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @obforms.each do |obform| %>
+      <tr>
+        <td><%= obform.fname %></td>
+        <td><%= obform.lname %></td>
+        <td><%= link_to obform.dname,obform_path(obform) %></td>
+        <td><%= obform.pname %></td>
+        <td><%=l obform.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_obform_path(obform), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      obform_path(obform),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_obform_path,
+            :class => 'btn btn-primary' %>

@@ -42,7 +42,7 @@
                 <li class="dropdown">
                 <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">ახალი დარეკვა<b class="caret"></b></a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-                    <li><%= link_to('პირველი დარეკვა', new_call1_path(@call1, :call=>"1"), :tabindex=>"-1") %></li>
+                    <li><%= link_to('პირველი დარეკვა', new_obform_path(@obform, :call=>"1"), :tabindex=>"-1") %></li>
                     <li><%= link_to('მე-2 დარეკვა', new_call2_path(@call2, :call=>"2"), :tabindex=>"-1") %></li>
                     <li><%= link_to('მე-3 დარეკვა', new_call3_path(@call3, :call=>"3"), :tabindex=>"-1") %></li>
                     <li><%= link_to('მე-4 დარეკვა', new_call4_path(@call4, :call=>"4"), :tabindex=>"-1") %></li>

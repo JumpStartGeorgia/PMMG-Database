@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fname: MyString
+  lname: MyString
+  dname: MyString
+  pname: 1
+  label_al: false
+  label_am: false
+  label_an: false
+  label_ap: false
+  label_aq: false
+  label_ar: false
+  label_as: false
+  label_at: false
+
+two:
+  fname: MyString
+  lname: MyString
+  dname: MyString
+  pname: 1
+  label_al: false
+  label_am: false
+  label_an: false
+  label_ap: false
+  label_aq: false
+  label_ar: false
+  label_as: false
+  label_at: false

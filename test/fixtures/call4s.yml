@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fname: MyString
+  lname: MyString
+  dname: MyString
+  pname: 1
+  label_n: MyString
+  label_p: MyString
+  label_q: MyString
+  label_r: MyString
+  label_s: MyString
+  label_t: MyString
+  label_u: MyString
+  label_z: MyString
+  label_ab: MyString
+  label_ac: MyString
+  label_ad: false
+  label_af: false
+  label_ag: false
+  label_ah: false
+  label_ak: MyString
+
+two:
+  fname: MyString
+  lname: MyString
+  dname: MyString
+  pname: 1
+  label_n: MyString
+  label_p: MyString
+  label_q: MyString
+  label_r: MyString
+  label_s: MyString
+  label_t: MyString
+  label_u: MyString
+  label_z: MyString
+  label_ab: MyString
+  label_ac: MyString
+  label_ad: false
+  label_af: false
+  label_ag: false
+  label_ah: false
+  label_ak: MyString

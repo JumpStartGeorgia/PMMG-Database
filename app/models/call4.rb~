@@ -1,0 +1,2 @@
+class Call4 < ActiveRecord::Base
+end

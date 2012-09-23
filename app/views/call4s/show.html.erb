@@ -1,0 +1,57 @@
+<%- model_class = Call4 -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:fname) %>:</strong></dt>
+  <dd><%= @call4.fname %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:lname) %>:</strong></dt>
+  <dd><%= @call4.lname %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:dname) %>:</strong></dt>
+  <dd><%= @call4.dname %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pname) %>:</strong></dt>
+  <dd><%= @call4.pname %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_n) %>:</strong></dt>
+  <dd><%= @call4.label_n %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_p) %>:</strong></dt>
+  <dd><%= @call4.label_p %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_q) %>:</strong></dt>
+  <dd><%= @call4.label_q %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_r) %>:</strong></dt>
+  <dd><%= @call4.label_r %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_s) %>:</strong></dt>
+  <dd><%= @call4.label_s %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_t) %>:</strong></dt>
+  <dd><%= @call4.label_t %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_u) %>:</strong></dt>
+  <dd><%= @call4.label_u %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_z) %>:</strong></dt>
+  <dd><%= @call4.label_z %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_ab) %>:</strong></dt>
+  <dd><%= @call4.label_ab %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_ac) %>:</strong></dt>
+  <dd><%= @call4.label_ac %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_ad) %>:</strong></dt>
+  <dd><%= @call4.label_ad %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_af) %>:</strong></dt>
+  <dd><%= @call4.label_af %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_ag) %>:</strong></dt>
+  <dd><%= @call4.label_ag %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_ah) %>:</strong></dt>
+  <dd><%= @call4.label_ah %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_ak) %>:</strong></dt>
+  <dd><%= @call4.label_ak %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              call4s_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_call4_path(@call4), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              call4_path(@call4),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

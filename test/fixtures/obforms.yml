@@ -1,0 +1,81 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fname: MyString
+  lname: MyString
+  dname: MyString
+  pname: 1
+  a_label: false
+  b_label: false
+  c_label: false
+  d_label: 1
+  e_label: 1
+  f_label: 1
+  g_label: false
+  h_label: false
+  k_label: MyString
+  l_label: 1
+  m_label: 1
+  n_label: MyString
+  p_label: MyString
+  q_label: MyString
+  r_label: MyString
+  s_label: 
+  t_label: 
+  u_label: 
+  z_label: MyString
+  ab_label: MyString
+  ac_label: MyString
+  ad_label: false
+  af_label: false
+  ag_label: false
+  ah_label: false
+  ak_label: MyString
+  al_label: false
+  am_label: false
+  an_label: false
+  ap_label: false
+  aq_label: false
+  ar_label: false
+  as_label: false
+  at_label: false
+
+two:
+  fname: MyString
+  lname: MyString
+  dname: MyString
+  pname: 1
+  a_label: false
+  b_label: false
+  c_label: false
+  d_label: 1
+  e_label: 1
+  f_label: 1
+  g_label: false
+  h_label: false
+  k_label: MyString
+  l_label: 1
+  m_label: 1
+  n_label: MyString
+  p_label: MyString
+  q_label: MyString
+  r_label: MyString
+  s_label: 
+  t_label: 
+  u_label: 
+  z_label: MyString
+  ab_label: MyString
+  ac_label: MyString
+  ad_label: false
+  af_label: false
+  ag_label: false
+  ah_label: false
+  ak_label: MyString
+  al_label: false
+  am_label: false
+  an_label: false
+  ap_label: false
+  aq_label: false
+  ar_label: false
+  as_label: false
+  at_label: false

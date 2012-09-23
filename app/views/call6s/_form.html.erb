@@ -1,0 +1,44 @@
+<%= form_for @call6, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :fname, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :fname, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :lname, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :lname, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :dname, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :dname, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :pname, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :pname, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :label_a, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :label_a, :class => 'check_box' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :label_b, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :label_b, :class => 'check_box' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                call6s_path, :class => 'btn' %>
+  </div>
+<% end %>

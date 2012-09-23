@@ -1,0 +1,122 @@
+<%= form_for @call4, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :fname, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :fname, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :lname, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :lname, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :dname, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :dname, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :pname, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :pname, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :label_n, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :label_n, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :label_p, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :label_p, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :label_q, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :label_q, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :label_r, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :label_r, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :label_s, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :label_s, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :label_t, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :label_t, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :label_u, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :label_u, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :label_z, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :label_z, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :label_ab, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :label_ab, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :label_ac, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :label_ac, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :label_ad, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :label_ad, :class => 'check_box' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :label_af, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :label_af, :class => 'check_box' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :label_ag, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :label_ag, :class => 'check_box' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :label_ah, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.check_box :label_ah, :class => 'check_box' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :label_ak, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :label_ak, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                call4s_path, :class => 'btn' %>
+  </div>
+<% end %>

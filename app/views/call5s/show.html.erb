@@ -1,0 +1,43 @@
+<%- model_class = Call5 -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:fname) %>:</strong></dt>
+  <dd><%= @call5.fname %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:lname) %>:</strong></dt>
+  <dd><%= @call5.lname %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:dname) %>:</strong></dt>
+  <dd><%= @call5.dname %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:pname) %>:</strong></dt>
+  <dd><%= @call5.pname %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_al) %>:</strong></dt>
+  <dd><%= @call5.label_al %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_am) %>:</strong></dt>
+  <dd><%= @call5.label_am %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_an) %>:</strong></dt>
+  <dd><%= @call5.label_an %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_ap) %>:</strong></dt>
+  <dd><%= @call5.label_ap %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_aq) %>:</strong></dt>
+  <dd><%= @call5.label_aq %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_ar) %>:</strong></dt>
+  <dd><%= @call5.label_ar %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_as) %>:</strong></dt>
+  <dd><%= @call5.label_as %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:label_at) %>:</strong></dt>
+  <dd><%= @call5.label_at %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              call5s_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_call5_path(@call5), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              call5_path(@call5),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

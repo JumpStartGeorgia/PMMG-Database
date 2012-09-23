@@ -56,7 +56,6 @@ ka:
         title: ახალი მომხმარებელი
       show:
         title: მომხმარებლის დეტალები
-
     obform:
       index:
-        title: 'Obfrom Geo Title'
+        title: ''

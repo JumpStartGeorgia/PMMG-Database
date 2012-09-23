@@ -1,0 +1,72 @@
+<%- model_class = Call4 -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:fname) %></th>
+      <th><%= model_class.human_attribute_name(:lname) %></th>
+      <th><%= model_class.human_attribute_name(:dname) %></th>
+      <th><%= model_class.human_attribute_name(:pname) %></th>
+      <th><%= model_class.human_attribute_name(:label_n) %></th>
+      <th><%= model_class.human_attribute_name(:label_p) %></th>
+      <th><%= model_class.human_attribute_name(:label_q) %></th>
+      <th><%= model_class.human_attribute_name(:label_r) %></th>
+      <th><%= model_class.human_attribute_name(:label_s) %></th>
+      <th><%= model_class.human_attribute_name(:label_t) %></th>
+      <th><%= model_class.human_attribute_name(:label_u) %></th>
+      <th><%= model_class.human_attribute_name(:label_z) %></th>
+      <th><%= model_class.human_attribute_name(:label_ab) %></th>
+      <th><%= model_class.human_attribute_name(:label_ac) %></th>
+      <th><%= model_class.human_attribute_name(:label_ad) %></th>
+      <th><%= model_class.human_attribute_name(:label_af) %></th>
+      <th><%= model_class.human_attribute_name(:label_ag) %></th>
+      <th><%= model_class.human_attribute_name(:label_ah) %></th>
+      <th><%= model_class.human_attribute_name(:label_ak) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @call4s.each do |call4| %>
+      <tr>
+        <td><%= link_to call4.id, call4_path(call4) %></td>
+        <td><%= call4.fname %></td>
+        <td><%= call4.lname %></td>
+        <td><%= call4.dname %></td>
+        <td><%= call4.pname %></td>
+        <td><%= call4.label_n %></td>
+        <td><%= call4.label_p %></td>
+        <td><%= call4.label_q %></td>
+        <td><%= call4.label_r %></td>
+        <td><%= call4.label_s %></td>
+        <td><%= call4.label_t %></td>
+        <td><%= call4.label_u %></td>
+        <td><%= call4.label_z %></td>
+        <td><%= call4.label_ab %></td>
+        <td><%= call4.label_ac %></td>
+        <td><%= call4.label_ad %></td>
+        <td><%= call4.label_af %></td>
+        <td><%= call4.label_ag %></td>
+        <td><%= call4.label_ah %></td>
+        <td><%= call4.label_ak %></td>
+        <td><%=l call4.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_call4_path(call4), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      call4_path(call4),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_call4_path,
+            :class => 'btn btn-primary' %>

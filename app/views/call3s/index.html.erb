@@ -1,0 +1,44 @@
+<%- model_class = Call3 -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:fname) %></th>
+      <th><%= model_class.human_attribute_name(:lname) %></th>
+      <th><%= model_class.human_attribute_name(:dname) %></th>
+      <th><%= model_class.human_attribute_name(:pname) %></th>
+      <th><%= model_class.human_attribute_name(:label_m) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @call3s.each do |call3| %>
+      <tr>
+        <td><%= link_to call3.id, call3_path(call3) %></td>
+        <td><%= call3.fname %></td>
+        <td><%= call3.lname %></td>
+        <td><%= call3.dname %></td>
+        <td><%= call3.pname %></td>
+        <td><%= call3.label_m %></td>
+        <td><%=l call3.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_call3_path(call3), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      call3_path(call3),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_call3_path,
+            :class => 'btn btn-primary' %>

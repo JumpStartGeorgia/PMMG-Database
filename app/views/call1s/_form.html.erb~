@@ -1,0 +1,88 @@
+<%= form_for @call1, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <label class="control-label" for="call1_fname">სახელი</label>
+    <div class="controls">
+      <%= f.text_field :fname, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="call1_lname">გვარი</label>
+    <div class="controls">
+      <%= f.text_field :lname, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="call1_dname">საარჩევნო ოლქის დასახელება</label>
+    <div class="controls">
+      <%= f.text_field :dname, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="call1_pname">საარჩევნო უბნის ნომერი</label>
+    <div class="controls">
+      <%= f.number_field :pname, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="call1_c_label">გაიხსნა თუ არა საარჩევნო უბანი დროულად - 07:00 საათზე?</label>
+    <div class="controls">
+      <%= f.radio_button :c_label, true %>
+      <%= label :c_label, 'დიახ' %>
+      <%= f.radio_button :c_label, false %>
+      <%= label :c_label, 'არა' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="call1_pname">ამომრჩეველთა საერთო რაოდენობა ერთიან სიაში (ოქმის 1-ელი გრაფა)</label>
+    <div class="controls">
+      <%= f.number_field :d_label, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="call1_pname">ამომრჩეველთა რაოდენობა სპეციალურ სიაში (ოქმის მე-2 გრაფა)</label>
+    <div class="controls">
+      <%= f.number_field :e_label, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="call1_pname">გადასატანი საარჩევნო ყუთის სიაში არსებულ ამომრჩეველთა რაოდენობა (მოიძიეთ  მდივანთან)</label>
+    <div class="controls">
+      <%= f.number_field :f_label, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="call1_g_label">ჰქონდა თუ არა საარჩევნო უბანს ყველა საჭირო მასალა?</label>
+    <div class="controls">
+      <%= f.radio_button :g_label, true %>
+      <%= label :g_label, 'დიახ' %>
+      <%= f.radio_button :g_label, false %>
+      <%= label :g_label, 'არა' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="call1_h_label">შექმნილია თუ არა კენჭისყრის ფარულობისთვის საჭირო პირობები?</label>
+    <div class="controls">
+      <%= f.radio_button :h_label, true %>
+      <%= label :h_label, 'დიახ' %>
+      
+      <%= f.radio_button :h_label, false %>
+      <%= label :h_label, 'არა' %>
+    </div>
+  </div>
+   <div class="control-group">
+    <label class="control-label" for="call1_k_label">ჩატარდა თუ არა უბნის გახსნის პროცედურები დადგენილი კანონმდებლობის შესაბამისად?</label>
+    <div class="controls">
+      <%= f.radio_button :k_label, '1' %>
+      <%= label :k_label, 'დიახ, პროცესი ჩატარდა კარგად' %>
+      <%= f.radio_button :k_label, '2' %>
+      <%= label :k_label, 'ძირითადად კარგად, თუმცა მცირედი ხარვეზებით' %>
+      <%= f.radio_button :k_label, '3' %>
+      <%= label :k_label, 'არა, პროცესი ჩატარდა  დარღვევებით' %>
+    </div>
+  </div>
+  <div class="form-actions">
+    <%= f.submit "Save", :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                call1s_path, :class => 'btn' %>
+  </div>
+<% end %>
