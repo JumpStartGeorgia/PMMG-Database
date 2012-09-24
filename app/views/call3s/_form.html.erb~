@@ -1,38 +1,40 @@
-<%= form_for @call2, :html => { :class => 'form-horizontal' } do |f| %>
+<%= form_for @call3, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
-    <%= label :fname, t('call2.form.fname'), :class => 'control-label' %>
+    <%= label :fname, t('call3.form.fname'), :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :fname, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
-    <%= label :lname, t('call2.form.fname'), :class => 'control-label' %>
+    <%= label :lname, t('call3.form.fname'), :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :lname, :class => 'text_field' %>
+      <%= f.radio_button :h_label, true %>
+      <%= label :h_label, t('call1.form.affirmative') %>
+      <%= f.radio_button :h_label, false %>
+      <%= label :h_label, t('call1.form.negative') %>
     </div>
   </div>
   <div class="control-group">
-    <%= label :dname, t('call2.form.dname'), :class => 'control-label' %>
+    <%= label :dname, t('call3.form.dname'), :class => 'control-label' %>
     <div class="controls">
       <%= f.collection_select :dname, District.order(:dname), :id, :dname, include_blank: true %>
     </div>
   </div>
   <div class="control-group">
-    <%= label :pname, t('call2.form.pname'), :class => 'control-label' %>
+    <%= label :pname, t('call3.form.pname'), :class => 'control-label' %>
     <div class="controls">
       <%= f.grouped_collection_select :id, District.order(:dname), :precincts, :dname, :pname, :pname, include_blank: true %>
     </div>
   </div>
   <div class="control-group">
-    <%= label :label_l, t('call2.form.label_l'), :class => 'control-label' %>
+    <%= label :label_m, t('call3.form.label_m'), :class => 'control-label' %>
     <div class="controls">
-      <%= f.number_field :label_l, :class => 'number_field' %>
+      <%= f.number_field :label_m, :class => 'number_field' %>
     </div>
   </div>
-
   <div class="form-actions">
     <%= f.submit t('app.buttons.save'), :class => 'btn btn-primary' %>
     <%= link_to t('app.buttons.cancel'),
-                call2s_path, :class => 'btn' %>
+                call3s_path, :class => 'btn' %>
   </div>
 <% end %>

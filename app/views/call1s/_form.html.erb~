@@ -1,83 +1,82 @@
 <%= form_for @call1, :html => { :class => 'form-horizontal' } do |f| %>
   <div class="control-group">
-    <label class="control-label" for="call1_fname">სახელი</label>
+    <%= label :fname, t('call1.form.fname'), :for=>'call1_fname', :class=>'control-label' %>
     <div class="controls">
       <%= f.text_field :fname, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
-    <label class="control-label" for="call1_lname">გვარი</label>
+    <%= label :fname, t('call1.form.lname'), :for=>'call1_lname', :class=>'control-label' %>
     <div class="controls">
       <%= f.text_field :lname, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
-    <%= label :dname, 'საარჩევნო ოლქის დასახელება', :for=>"call1_dname", :class=>"control-label" %>
+    <%= label :dname, t('call1.form.dname'), :for=>"call1_dname", :class=>"control-label" %>
     <div class="controls">
       <%= f.collection_select :dname, District.order(:dname), :id, :dname, include_blank: true %>
     </div>
   </div>
   <div class="control-group">
-    <%= label :pname, 'საარჩევნო უბნის ნომერი', :for=>"call1_pname", :class=>"control-label" %>
+    <%= label :pname, t('call1.form.pname'), :for=>"call1_pname", :class=>"control-label" %>
     <div class="controls">
-      <%= f.grouped_collection_select :id, District.order(:dname), :precincts, :dname, :id, :pname, include_blank: true %>
+      <%= f.grouped_collection_select :id, District.order(:dname), :precincts, :dname, :pname, :pname, include_blank: true %>
     </div>
   </div>
   <div class="control-group">
-    <label class="control-label" for="call1_c_label">გაიხსნა თუ არა საარჩევნო უბანი დროულად - 07:00 საათზე?</label>
+    <%= label :c_label, t('call1.form.c_label'), :for=>'call1_c_label', :class=>'control-label' %>
     <div class="controls">
       <%= f.radio_button :c_label, true %>
-      <%= label :c_label, 'დიახ' %>
+      <%= label :c_label, t('call1.form.affirmative') %>
       <%= f.radio_button :c_label, false %>
-      <%= label :c_label, 'არა' %>
+      <%= label :c_label, t('call1.form.negative') %>
     </div>
   </div>
   <div class="control-group">
-    <label class="control-label" for="call1_pname">ამომრჩეველთა საერთო რაოდენობა ერთიან სიაში (ოქმის 1-ელი გრაფა)</label>
+    <%= label :d_label, t('call1.form.d_label'), :for=>'call1_d_label', :class=>'control-label' %>
     <div class="controls">
       <%= f.number_field :d_label, :class => 'number_field' %>
     </div>
   </div>
   <div class="control-group">
-    <label class="control-label" for="call1_pname">ამომრჩეველთა რაოდენობა სპეციალურ სიაში (ოქმის მე-2 გრაფა)</label>
+    <%= label :e_label, t('call1.form.e_label'), :for=>'call1_e_label', :class=>'control-label' %>
     <div class="controls">
       <%= f.number_field :e_label, :class => 'number_field' %>
     </div>
   </div>
   <div class="control-group">
-    <label class="control-label" for="call1_pname">გადასატანი საარჩევნო ყუთის სიაში არსებულ ამომრჩეველთა რაოდენობა (მოიძიეთ  მდივანთან)</label>
+    <%= label :f_label, t('call1.form.f_label'), :for=>'call1_f_label', :class=>'control-label' %>
     <div class="controls">
       <%= f.number_field :f_label, :class => 'number_field' %>
     </div>
   </div>
   <div class="control-group">
-    <label class="control-label" for="call1_g_label">ჰქონდა თუ არა საარჩევნო უბანს ყველა საჭირო მასალა?</label>
+    <%= label :g_label, t('call1.form.g_label'), :for=>'call1_g_label', :class=>'control-label' %>
     <div class="controls">
       <%= f.radio_button :g_label, true %>
-      <%= label :g_label, 'დიახ' %>
+      <%= label :g_label, t('call1.form.affirmative') %>
       <%= f.radio_button :g_label, false %>
-      <%= label :g_label, 'არა' %>
+      <%= label :g_label, t('call1.form.negative') %>
     </div>
   </div>
   <div class="control-group">
-    <label class="control-label" for="call1_h_label">შექმნილია თუ არა კენჭისყრის ფარულობისთვის საჭირო პირობები?</label>
+    <%= label :h_label, t('call1.form.h_label'), :for=>'call1_h_label', :class=>'control-label' %>
     <div class="controls">
       <%= f.radio_button :h_label, true %>
-      <%= label :h_label, 'დიახ' %>
-      
+      <%= label :h_label, t('call1.form.affirmative') %>
       <%= f.radio_button :h_label, false %>
-      <%= label :h_label, 'არა' %>
+      <%= label :h_label, t('call1.form.negative') %>
     </div>
   </div>
    <div class="control-group">
-    <label class="control-label" for="call1_k_label">ჩატარდა თუ არა უბნის გახსნის პროცედურები დადგენილი კანონმდებლობის შესაბამისად?</label>
+     <%= label :k_label, t('call1.form.k_label'), :for=>'call1_k_label', :class=>'control-label' %>
     <div class="controls">
       <%= f.radio_button :k_label, '1' %>
-      <%= label :k_label, 'დიახ, პროცესი ჩატარდა კარგად' %>
+      <%= label :k_label, t('call1.form.k_label_one') %>
       <%= f.radio_button :k_label, '2' %>
-      <%= label :k_label, 'ძირითადად კარგად, თუმცა მცირედი ხარვეზებით' %>
+      <%= label :k_label, t('call1.form.k_label_two') %>
       <%= f.radio_button :k_label, '3' %>
-      <%= label :k_label, 'არა, პროცესი ჩატარდა  დარღვევებით' %>
+      <%= label :k_label, t('call1.form.k_label_three') %>
     </div>
   </div>
   <div class="form-actions">
