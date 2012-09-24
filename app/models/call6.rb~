@@ -1,2 +1,0 @@
-class Call6 < ActiveRecord::Base
-end

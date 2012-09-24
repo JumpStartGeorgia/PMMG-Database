@@ -1,4 +1,0 @@
-class Precinct < ActiveRecord::Base
-  attr_accessible :district_id, :pname
-  
-end
