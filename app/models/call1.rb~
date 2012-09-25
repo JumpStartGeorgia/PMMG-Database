@@ -11,11 +11,7 @@ class Call1 < ActiveRecord::Base
   end
   
   def self.times_true(label)
-    return self.where(label => true).length
-  end
-  
-  def self.times_option(label, option)
-    return self.where(label => option).length
+    return self.where(label => true).size
   end
   
 end

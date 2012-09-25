@@ -3,7 +3,7 @@ class Precinct < ActiveRecord::Base
   belongs_to :district
   
   # number of items per page for pagination
-	self.per_page = 20
+	self.per_page = 50
 	
   def self.missing_call(objname)
    call = objname.select("pname")

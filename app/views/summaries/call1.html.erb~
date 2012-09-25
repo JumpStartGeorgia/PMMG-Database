@@ -1,0 +1,54 @@
+<div class="page-header"><h1>პირველი დარეკვის ანგარიში</h1></div>
+
+<h2>საერთო ინფორმაცია</h2>
+
+<ul class="standard">
+  <li>Number of precincts reported: <%= @precincts.length %> precincts</li>
+  <li>Percent of precincts reporting: <%= number_to_percentage(@precincts.length.to_f / @total_precincts.length) %></li>
+</ul>
+<br />
+
+<h2>პერველი დარეკვის დეტალურ ინფორმაცია</h2>
+
+<ul class="standard">
+  <li>Percent of precincts opening on time (7:00): <%= @on_time %></li>
+  <li>Overall number of voters in <strong>general</strong> list: <%= @voters_general %></li>
+  <li>Overall number of voters in <strong>special</strong> list: <%= @voters_special %></li>
+  <li>Overall number of voters in <strong>mobile</strong> list: <%= @voters_mobile %></li>
+  <li>Percent of precincts having all electoral materials: <%= number_to_percentage(@e_materials.to_f / @precincts.length) %></li>
+  <li>Percent of precincts where confidentiality is maintained: <%= number_to_percentage(@confide.to_f / @precincts.length) %></li>
+  <li>Were the precint's opening procedures conducted according to law?<ul>
+    <li>Yes, process was conducted well: <%= @legal_one %></li>
+    <li>Basically well, but with minor shortcomings: <%= @legal_two %></li>
+    <li>No, the process was conducted with violations: <%= @legal_three %></li>
+  </ul></li>
+</ul>
+<br />
+
+<h2>უბნები, რომლებიც აკლია:</h2>
+
+<% unless @missing.empty? %>
+  <table class="table table-striped span6">
+    <thead>
+      <tr>
+        <th>საარჩევნო ოლქი</th>
+        <th>საარჩევნო უბანი</th>
+        <th>ახალი პირველის დარეკვის შექმნა</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @missing.each do |precinct| %>
+      <tr>
+        <td><%= precinct.district.dname %></td>
+        <td><%= precinct.pname %></td>
+        <td>
+          <%= link_to t('app.buttons.new'), new_call1_path, :class => 'btn btn-mini' %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+  <%= page_navigation_links @missing, :class=>"pagination" %>
+<% else %>
+  <h3>ამ ეტაპზე ყველა უბანი აკლია!</h3>
+<% end %>

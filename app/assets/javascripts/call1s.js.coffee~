@@ -3,11 +3,11 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->    
-  precincts = $('#call1_pname').html()
+  precincts = $('#call1_id').html()
   $('#call1_dname').change ->
     district = $('#call1_dname :selected').text()
     options = $(precincts).filter("optgroup[label='#{district}']").html()
     if options
-      $('#call1_pname').html(options)
+      $('#call1_id').html(options)
     else
-      $('#call1_pname').empty()
+      $('#call1_id').empty()

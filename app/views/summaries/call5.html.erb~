@@ -1,0 +1,31 @@
+<div class="page-header"><h1>მე-5 დარეკვის ანგარიში</h1></div>
+
+<h2>საერთო ინფორმაცია</h2>
+
+<ul class="standard">
+  <li>Number of precincts reported: <%= @precincts.size %> precincts</li>
+  <li>Percent of precincts complete: <%= @precincts.size / @total_precincts.size * 100 %> %</li>
+</ul>
+<br />
+
+<h2>Missing Precincts:</h2>
+<% unless @missing.empty? %>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>საარჩევნო ოლქი</th>
+        <th>საარჩევნო უბანი</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @missing.each do |precinct| %>
+      <tr>
+        <td><%= precinct.district.dname %></td>
+        <td><%= precinct.pname %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <h3>ამ ეტაპზე ყველა უბანი აკლია!</h3>
+<% end %>
