@@ -1,4 +1,5 @@
 class Call1sController < ApplicationController
+  before_filter :authenticate_user!
   # GET /call1s
   # GET /call1s.json
   def index
@@ -40,7 +41,7 @@ class Call1sController < ApplicationController
   # POST /call1s
   # POST /call1s.json
   def create
-    
+
     @call1 = Call1.new(params[:call1])
 
     respond_to do |format|

@@ -16,8 +16,8 @@ BootstrapStarter::Application.routes.draw do
 
   get "pages/home"
 
+	match '/admin', :to => 'admin#index', :as => :admin, :via => :get
 	devise_for :users
-
 	namespace :admin do
 		resources :users
 	end

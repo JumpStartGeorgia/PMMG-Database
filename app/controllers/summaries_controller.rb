@@ -1,4 +1,5 @@
 class SummariesController < ApplicationController
+  before_filter :authenticate_user!
   def call1
     @total_precincts = Precinct.all
     @precincts = Call1.all

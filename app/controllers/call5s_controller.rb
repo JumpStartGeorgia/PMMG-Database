@@ -1,4 +1,5 @@
 class Call5sController < ApplicationController
+  before_filter :authenticate_user!
   # GET /call5s
   # GET /call5s.json
   def index

@@ -25,7 +25,7 @@ class SummariesController < ApplicationController
     @total_precincts = Precinct.all
     @precincts = Call3.all
     @missing = Precinct.missing_call(Call3).paginate(:page => params[:page])
-    @signatures = Call3.add_values(:label_l)
+    @signatures = Call3.add_values(:label_m)
   end
 
   def call4
