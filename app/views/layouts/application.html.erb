@@ -33,26 +33,37 @@
           <%= link_to(t('app.common.app_name'), root_path,:class=>"brand font")%>
           <div class="container nav-collapse">
             <ul class="nav">
+              <li class="dropdown">
+                  <a id="drop2" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">ახალი დარეკვა<b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                      <li><%= link_to('პირველი დარეკვა', new_call1_path(@call1), :tabindex=>"-1") %></li>
+                      <li><%= link_to('მე-2 დარეკვა', new_call2_path(@call2), :tabindex=>"-1") %></li>
+                      <li><%= link_to('მე-3 დარეკვა', new_call3_path(@call3), :tabindex=>"-1") %></li>
+                      <li><%= link_to('მე-4 დარეკვა', new_call4_path(@call4), :tabindex=>"-1") %></li>
+                      <li><%= link_to('მე-5 დარეკვა', new_call5_path(@call5), :tabindex=>"-1") %></li>
+                      <li><%= link_to('მე-6 დარეკვა', new_call6_path(@call6), :tabindex=>"-1") %></li>
+                    </ul>
+                  </li>
               <li clas  s="dropdown">
                 <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">ანგარიშები<b class="caret"></b></a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-                    <li><%= link_to('პირველი დარეკვის ანგარიში', '/summaries/call1')%></li>
-                    <li><%= link_to('მე-2 დარეკვის ანგარიში', '/summaries/call2')%></li>
-                    <li><%= link_to('მე-3 დარეკვის ანგარიში', '/summaries/call3')%></li>
-                    <li><%= link_to('მე-4 დარეკვის ანგარიში', '/summaries/call4')%></li>
-                    <li><%= link_to('მე-5 დარეკვის ანგარიში', '/summaries/call5')%></li>
-                    <li><%= link_to('მე-6 დარეკვის ანგარიში', '/summaries/call6')%></li>
+                    <li><%= link_to('პირველი დარეკვა', '/summaries/call1',  :tabindex=>"0")%></li>
+                    <li><%= link_to('მე-2 დარეკვა', '/summaries/call2', :tabindex=>"0")%></li>
+                    <li><%= link_to('მე-3 დარეკვა', '/summaries/call3', :tabindex=>"0")%></li>
+                    <li><%= link_to('მე-4 დარეკვა', '/summaries/call4', :tabindex=>"0")%></li>
+                    <li><%= link_to('მე-5 დარეკვა', '/summaries/call5', :tabindex=>"0")%></li>
+                    <li><%= link_to('მე-6 დარეკვა', '/summaries/call6', :tabindex=>"0")%></li>
                   </ul>
                 </li>
                 <li class="dropdown">
-                <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">ახალი დარეკვა<b class="caret"></b></a>
+                <a id="drop3" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">დერეკვის სიები<b class="caret"></b></a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-                    <li><%= link_to('პირველი დარეკვა', new_call1_path(@call1), :tabindex=>"-1") %></li>
-                    <li><%= link_to('მე-2 დარეკვა', new_call2_path(@call2), :tabindex=>"-1") %></li>
-                    <li><%= link_to('მე-3 დარეკვა', new_call3_path(@call3), :tabindex=>"-1") %></li>
-                    <li><%= link_to('მე-4 დარეკვა', new_call4_path(@call4), :tabindex=>"-1") %></li>
-                    <li><%= link_to('მე-5 დარეკვა', new_call5_path(@call5), :tabindex=>"-1") %></li>
-                    <li><%= link_to('მე-6 დარეკვა', new_call6_path(@call6), :tabindex=>"-1") %></li>
+                    <li><%= link_to('პირველი დარეკვა', call1s_path(@call1), :tabindex=>"-1") %></li>
+                    <li><%= link_to('მე-2 დარეკვა', call2s_path(@call2), :tabindex=>"-1") %></li>
+                    <li><%= link_to('მე-3 დარეკვა', call3s_path(@call3), :tabindex=>"-1") %></li>
+                    <li><%= link_to('მე-4 დარეკვა', call4s_path(@call4), :tabindex=>"-1") %></li>
+                    <li><%= link_to('მე-5 დარეკვა', call5s_path(@call5), :tabindex=>"-1") %></li>
+                    <li><%= link_to('მე-6 დარეკვა', call6s_path(@call6), :tabindex=>"-1") %></li>
                   </ul>
                 </li>
 		          <% if user_signed_in? %>

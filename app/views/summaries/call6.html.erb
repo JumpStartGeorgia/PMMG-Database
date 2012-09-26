@@ -3,21 +3,29 @@
 <h2>საერთო ინფორმაცია</h2>
 
 <ul class="standard">
-  <li>Number of precincts reported: <%= @precincts.size %> precincts</li>
-  <li>Percent of precincts complete: <%= @precincts.size / @total_precincts.size * 100 %> %</li>
+  <li>Total number of precincts being observed: <%= @total_precincts.length %></li>
+  <li>Number of precincts reported: <%= @precincts.length %> precincts</li>
+  <li>Percent of precincts reporting: <%= number_to_percentage(@precincts.length.to_f / @total_precincts.length) %></li>
 </ul>
 <br />
 
 <h2>პერველი დარეკვის დეტალურ ინფორმაცია</h2>
 
-<h2>Missing Precincts:</h2>
+<ul class="standard">
+  <li>Number of precincts where observer's right was restricted at any stage of the precinct's operation, preparation, ballot-casting, and vote-councting: <%= @restrictions %></li>
+  <li>Percent of precincts where observer's right was restricted at any stage of the precinct's operation, preparation, ballot-casting, and vote-councting: <%= number_to_percentage(@restrictions.to_f / @total_precincts.length) %></li>
+</ul>
+<br />
+
+<h2>უბნები, რომლებიც აკლია:</h2>
 
 <% unless @missing.empty? %>
-  <table class="table table-striped">
+  <table class="table table-striped span6">
     <thead>
       <tr>
         <th>საარჩევნო ოლქი</th>
         <th>საარჩევნო უბანი</th>
+        <th>ახალი პირველის დარეკვის შექმნა</th>
       </tr>
     </thead>
     <tbody>
@@ -25,10 +33,14 @@
       <tr>
         <td><%= precinct.district.dname %></td>
         <td><%= precinct.pname %></td>
+        <td>
+          <%= link_to t('app.buttons.new'), new_call1_path, :class => 'btn btn-mini' %>
+        </td>
       </tr>
     <% end %>
     </tbody>
   </table>
+  <%= page_navigation_links @missing %>
 <% else %>
   <h3>ამ ეტაპზე ყველა უბანი აკლია!</h3>
 <% end %>

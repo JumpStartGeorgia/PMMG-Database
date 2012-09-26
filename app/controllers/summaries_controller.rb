@@ -32,19 +32,20 @@ class SummariesController < ApplicationController
   def call4
     @total_precincts = Precinct.all
     @precincts = Call4.all
-    @missing = Precinct.missing_call(Call4)
+    @missing = Precinct.missing_call(Call4).paginate(:page => params[:page])
   end
 
   def call5
     @total_precincts = Precinct.all
     @precincts = Call5.all
-    @missing = Precinct.missing_call(Call5)
+    @missing = Precinct.missing_call(Call5).paginate(:page => params[:page])
   end
 
   def call6
     @total_precincts = Precinct.all
     @precincts = Call6.all
-    @missing = Precinct.missing_call(Call6)
+    @missing = Precinct.missing_call(Call6).paginate(:page => params[:page])
+    @restrictions = Call6.times_true(:label_a)
   end
 
 end

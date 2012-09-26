@@ -24,7 +24,7 @@ BootstrapStarter::Application.routes.draw do
 
 
 
-	root :to => 'call1s#index'
+	root :to => 'pages#home'
 
 	match '', :to => redirect("/") # handles /
 	match '*path', :to => redirect("/") # handles /not-a-locale/anything

@@ -3,6 +3,7 @@
 <h2>საერთო ინფორმაცია</h2>
 
 <ul class="standard">
+  <li>Total number of precincts being observed: <%= @total_precincts.length %></li>
   <li>Number of precincts reported: <%= @precincts.length %> precincts</li>
   <li>Percent of precincts reporting: <%= number_to_percentage(@precincts.length.to_f / @total_precincts.length) %></li>
 </ul>

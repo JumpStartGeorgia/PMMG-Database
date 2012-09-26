@@ -1,6 +1,5 @@
 class Call1 < ActiveRecord::Base
-
-  attr_accessible :fname, :lname, :dname, :pname, :c_label, :d_label, :e_label, :f_label, :g_label, :h_label, :k_label
+ attr_accessible :fname, :lname, :dname, :pname, :c_label, :d_label, :e_label, :f_label, :g_label, :h_label, :k_label
 
   validates :dname, :uniqueness => {:scope => :pname}
   
