@@ -20,7 +20,7 @@
   <div class="control-group">
     <%= label :pname, t('call4.form.pname'), :class => 'control-label' %>
     <div class="controls">
-      <%= f.grouped_collection_select :id, District.order(:dname), :precincts, :dname, :pname, :pname, include_blank: true %>
+      <%= f.grouped_collection_select :pname, District.order(:dname), :precincts, :dname, :id, :pname, include_blank: true %>
     </div>
   </div>
   <div class="control-group">
