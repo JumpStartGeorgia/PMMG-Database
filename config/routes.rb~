@@ -7,7 +7,12 @@ BootstrapStarter::Application.routes.draw do
   get "summaries/call5"
   get "summaries/call6"
 
-  
+  resources :call6s
+  resources :call5s
+  resources :call4s
+  resources :call3s
+  resources :call2s
+  resources :call1s
   
   get "pages/home"
 
@@ -22,12 +27,7 @@ BootstrapStarter::Application.routes.draw do
 			resources :users
 		end
 
-    resources :call6s
-    resources :call5s
-    resources :call4s
-    resources :call3s
-    resources :call2s
-    resources :call1s
+    
 
 		root :to => 'call1s#index'
 	  match "*path", :to => redirect("/#{I18n.default_locale}") # handles /en/fake/path/whatever

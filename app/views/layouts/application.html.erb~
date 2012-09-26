@@ -36,12 +36,12 @@
               <li clas  s="dropdown">
                 <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">ანგარიშები<b class="caret"></b></a>
                   <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-                    <li><%= link_to('პირველი დარეკვის ანგარიში', 'summaries/call1')%></li>
-                    <li><%= link_to('მე-2 დარეკვის ანგარიში', 'summaries/call2')%></li>
-                    <li><%= link_to('მე-3 დარეკვის ანგარიში', 'summaries/call3')%></li>
-                    <li><%= link_to('მე-4 დარეკვის ანგარიში', 'summaries/call4')%></li>
-                    <li><%= link_to('მე-5 დარეკვის ანგარიში', 'summaries/call5')%></li>
-                    <li><%= link_to('მე-6 დარეკვის ანგარიში', 'summaries/call6')%></li>
+                    <li><%= link_to('პირველი დარეკვის ანგარიში', '/summaries/call1')%></li>
+                    <li><%= link_to('მე-2 დარეკვის ანგარიში', '/summaries/call2')%></li>
+                    <li><%= link_to('მე-3 დარეკვის ანგარიში', '/summaries/call3')%></li>
+                    <li><%= link_to('მე-4 დარეკვის ანგარიში', '/summaries/call4')%></li>
+                    <li><%= link_to('მე-5 დარეკვის ანგარიში', '/summaries/call5')%></li>
+                    <li><%= link_to('მე-6 დარეკვის ანგარიში', '/summaries/call6')%></li>
                   </ul>
                 </li>
                 <li class="dropdown">
