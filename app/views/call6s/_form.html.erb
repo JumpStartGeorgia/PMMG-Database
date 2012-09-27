@@ -1,6 +1,6 @@
 <%= form_for @call6, :html => { :class => 'form-horizontal' } do |f| %>
   <%= f.error_messages %>
-  <%= field_set_tag 'საერთო ინფორმაცია', :class=>"label" do %>
+  <%= field_set_tag '', :class=>"label" do %>
   <div class="control-group">
     <%= label :fname, t('call6.form.fname'), :class => 'control-label' %>
     <div class="controls">
@@ -26,27 +26,35 @@
     </div>
   </div>
   <% end %>
+  
   <div class="control-group">
     <span class="label">A</span>
-    <%= label :label_a, t('call6.form.label_a'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :label_a, true %>
-      <%= label :label_a, t('call6.form.label_a_one') %>
-      <%= f.radio_button :label_a, false %>
-      <%= label :label_a, t('call6.form.label_a_two') %>
-    </div>
+    <%= f.label :label_a, t('call6.form.label_a'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :label_a, true, :class=>'radio' %>
+          <%= t('call6.form.label_a_one') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_a, false, :class=>'radio' %>
+          <%= t('call6.form.label_a_two') %>  
+        </label>
+      </div>
   </div>
   <div class="control-group">
     <span class="label">B</span>
-    <%= label :label_b, t('call6.form.label_b'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :label_b, true %>
-      <%= label :label_b, t('call6.form.label_b_one') %>
-      <%= f.radio_button :label_b, false %>
-      <%= label :label_b, t('call6.form.label_b_two') %>
-    </div>
+    <%= f.label :label_b, t('call6.form.label_b'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :label_b, true, :class=>'radio' %>
+          <%= t('call6.form.label_b_one') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_b, false, :class=>'radio' %>
+          <%= t('call6.form.label_b_two') %>  
+        </label>
+      </div>
   </div>
-
   <div class="form-actions">
     <%= f.submit t('app.buttons.save'), :class => 'btn btn-primary' %>
     <%= link_to t('app.buttons.cancel'),
