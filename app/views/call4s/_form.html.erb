@@ -1,5 +1,6 @@
 <%= form_for @call4, :html => { :class => 'form-horizontal' } do |f| %>
-  <%= field_set_tag 'საერთო ინფორმაცია', :class=>"label" do %>
+  <%= f.error_messages %>
+  <%= field_set_tag '', :class=>"label" do %>
   <div class="control-group">
     <%= label :fname, t('call4.form.fname'), :class => 'control-label' %>
     <div class="controls">
@@ -27,197 +28,299 @@
   <% end %>
   <div class="control-group">
     <span class="label">N</span>
-    <%= label :label_n, t('call4.form.label_n'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :label_n, '1' %>
-      <%= label :label_n, t('call4.form.label_n_one') %>
-      <%= f.radio_button :label_n, '2' %>
-      <%= label :label_n, t('call4.form.label_n_two') %>
-      <%= f.radio_button :label_n, '3' %>
-      <%= label :label_n, t('call4.form.label_n_three') %>
-      <%= f.radio_button :label_n, '4' %>
-      <%= label :label_n, t('call4.form.label_n_four') %>
-    </div>
+    <%= f.label :label_n, t('call4.form.label_n'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :label_n, 1, :class=>'radio' %>
+          <%= t('call4.form.label_n_one') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_n, 2, :class=>'radio' %>
+          <%= t('call4.form.label_n_two') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_n, 3, :class=>'radio' %>
+          <%= t('call4.form.label_n_three') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_n, 4, :class=>'radio' %>
+          <%= t('call4.form.label_n_four') %>  
+        </label>
+      </div>
   </div>
   <div class="control-group">
     <span class="label">P</span>
-    <%= label :label_p, t('call4.form.label_p'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :label_p, '1' %>
-      <%= label :label_p, t('call4.form.label_p_one') %>
-      <%= f.radio_button :label_p, '2' %>
-      <%= label :label_p, t('call4.form.label_p_two') %>
-      <%= f.radio_button :label_p, '3' %>
-      <%= label :label_p, t('call4.form.label_p_three') %>
-      <%= f.radio_button :label_p, '4' %>
-      <%= label :label_p, t('call4.form.label_p_four') %>
-    </div>
+    <%= f.label :label_p, t('call4.form.label_p'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :label_p, 1, :class=>'radio' %>
+          <%= t('call4.form.label_p_one') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_p, 2, :class=>'radio' %>
+          <%= t('call4.form.label_p_two') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_p, 3, :class=>'radio' %>
+          <%= t('call4.form.label_p_three') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_p, 4, :class=>'radio' %>
+          <%= t('call4.form.label_p_four') %>  
+        </label>
+      </div>
   </div>
   <div class="control-group">
     <span class="label">Q</span>
-    <%= label :label_q, t('call4.form.label_q'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :label_q, '1' %>
-      <%= label :label_q, t('call4.form.label_q_one') %>
-      <%= f.radio_button :label_q, '2' %>
-      <%= label :label_q, t('call4.form.label_q_two') %>
-      <%= f.radio_button :label_q, '3' %>
-      <%= label :label_q, t('call4.form.label_q_three') %>
-      <%= f.radio_button :label_q, '4' %>
-      <%= label :label_q, t('call4.form.label_q_four') %>
-    </div>
+    <%= f.label :label_q, t('call4.form.label_q'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :label_q, 1, :class=>'radio' %>
+          <%= t('call4.form.label_q_one') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_q, 2, :class=>'radio' %>
+          <%= t('call4.form.label_q_two') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_q, 3, :class=>'radio' %>
+          <%= t('call4.form.label_q_three') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_q, 4, :class=>'radio' %>
+          <%= t('call4.form.label_q_four') %>  
+        </label>
+      </div>
   </div>
   <div class="control-group">
     <span class="label">R</span>
-    <%= label :label_r, t('call4.form.label_r'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :label_r, '1' %>
-      <%= label :label_r, t('call4.form.label_r_one') %>
-      <%= f.radio_button :label_r, '2' %>
-      <%= label :label_r, t('call4.form.label_r_two') %>
-      <%= f.radio_button :label_r, '3' %>
-      <%= label :label_r, t('call4.form.label_r_three') %>
-      <%= f.radio_button :label_r, '4' %>
-      <%= label :label_r, t('call4.form.label_r_four') %>
-    </div>
-  </div>
+    <%= f.label :label_r, t('call4.form.label_r'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :label_r, 1, :class=>'radio' %>
+          <%= t('call4.form.label_r_one') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_r, 2, :class=>'radio' %>
+          <%= t('call4.form.label_r_two') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_r, 3, :class=>'radio' %>
+          <%= t('call4.form.label_r_three') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_r, 4, :class=>'radio' %>
+          <%= t('call4.form.label_r_four') %>  
+        </label>
+      </div>
+  </div>  
   <div class="control-group">
     <span class="label">S</span>
-    <%= label :label_s, t('call4.form.label_s'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :label_s, '1' %>
-      <%= label :label_s, t('call4.form.label_s_one') %>
-      <%= f.radio_button :label_s, '2' %>
-      <%= label :label_s, t('call4.form.label_s_two') %>
-      <%= f.radio_button :label_s, '3' %>
-      <%= label :label_s, t('call4.form.label_s_three') %>
-      <%= f.radio_button :label_s, '4' %>
-      <%= label :label_s, t('call4.form.label_s_four') %>
-    </div>
+    <%= f.label :label_s, t('call4.form.label_s'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :label_s, 1, :class=>'radio' %>
+          <%= t('call4.form.label_s_one') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_s, 2, :class=>'radio' %>
+          <%= t('call4.form.label_s_two') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_s, 3, :class=>'radio' %>
+          <%= t('call4.form.label_s_three') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_s, 4, :class=>'radio' %>
+          <%= t('call4.form.label_s_four') %>  
+        </label>
+      </div>
   </div>
   <div class="control-group">
     <span class="label">T</span>
-    <%= label :label_t, t('call4.form.label_t'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :label_t, '1' %>
-      <%= label :label_t, t('call4.form.label_t_one') %>
-      <%= f.radio_button :label_t, '2' %>
-      <%= label :label_t, t('call4.form.label_t_two') %>
-      <%= f.radio_button :label_t, '3' %>
-      <%= label :label_t, t('call4.form.label_t_three') %>
-      <%= f.radio_button :label_t, '4' %>
-      <%= label :label_t, t('call4.form.label_t_four') %>
-    </div>
+    <%= f.label :label_t, t('call4.form.label_t'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :label_t, 1, :class=>'radio' %>
+          <%= t('call4.form.label_t_one') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_t, 2, :class=>'radio' %>
+          <%= t('call4.form.label_t_two') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_t, 3, :class=>'radio' %>
+          <%= t('call4.form.label_t_three') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_t, 4, :class=>'radio' %>
+          <%= t('call4.form.label_t_four') %>  
+        </label>
+      </div>
   </div>
   <div class="control-group">
     <span class="label">U</span>
-    <%= label :label_u, t('call4.form.label_u'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :label_u, '1' %>
-      <%= label :label_u, t('call4.form.label_u_one') %>
-      <%= f.radio_button :label_u, '2' %>
-      <%= label :label_u, t('call4.form.label_u_two') %>
-      <%= f.radio_button :label_u, '3' %>
-      <%= label :label_u, t('call4.form.label_u_three') %>
-      <%= f.radio_button :label_u, '4' %>
-      <%= label :label_u, t('call4.form.label_u_four') %>
-    </div>
-  </div>
+    <%= f.label :label_u, t('call4.form.label_u'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :label_u, 1, :class=>'radio' %>
+          <%= t('call4.form.label_u_one') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_u, 2, :class=>'radio' %>
+          <%= t('call4.form.label_u_two') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_u, 3, :class=>'radio' %>
+          <%= t('call4.form.label_u_three') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_u, 4, :class=>'radio' %>
+          <%= t('call4.form.label_u_four') %>  
+        </label>
+      </div>
+  </div>  
   <div class="control-group">
     <span class="label">Z</span>
-    <%= label :label_z, t('call4.form.label_z'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :label_z, '1' %>
-      <%= label :label_z, t('call4.form.label_z_one') %>
-      <%= f.radio_button :label_z, '2' %>
-      <%= label :label_z, t('call4.form.label_z_two') %>
-      <%= f.radio_button :label_z, '3' %>
-      <%= label :label_z, t('call4.form.label_z_three') %>
-      <%= f.radio_button :label_z, '4' %>
-      <%= label :label_z, t('call4.form.label_z_four') %>
-    </div>
+    <%= f.label :label_z, t('call4.form.label_z'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :label_z, 1, :class=>'radio' %>
+          <%= t('call4.form.label_z_one') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_z, 2, :class=>'radio' %>
+          <%= t('call4.form.label_z_two') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_z, 3, :class=>'radio' %>
+          <%= t('call4.form.label_z_three') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_z, 4, :class=>'radio' %>
+          <%= t('call4.form.label_z_four') %>  
+        </label>
+      </div>
   </div>
+  
   <div class="control-group">
     <span class="label">AB</span>
-    <%= label :label_ab, t('call4.form.label_ab'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :label_ab, '1' %>
-      <%= label :label_ab, t('call4.form.label_ab_one') %>
-      <%= f.radio_button :label_ab, '2' %>
-      <%= label :label_ab, t('call4.form.label_ab_two') %>
-      <%= f.radio_button :label_ab, '3' %>
-      <%= label :label_ab, t('call4.form.label_ab_three') %>
-      <%= f.radio_button :label_ab, '4' %>
-      <%= label :label_ab, t('call4.form.label_ab_four') %>
-    </div>
+    <%= f.label :label_ab, t('call4.form.label_ab'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :label_ab, 1, :class=>'radio' %>
+          <%= t('call4.form.label_ab_one') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_ab, 2, :class=>'radio' %>
+          <%= t('call4.form.label_ab_two') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_ab, 3, :class=>'radio' %>
+          <%= t('call4.form.label_ab_three') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_ab, 4, :class=>'radio' %>
+          <%= t('call4.form.label_ab_four') %>  
+        </label>
+      </div>
   </div>
   <div class="control-group">
     <span class="label">AC</span>
-    <%= label :label_ac, t('call4.form.label_ac'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :label_ac, '1' %>
-      <%= label :label_ac, t('call4.form.label_ac_one') %>
-      <%= f.radio_button :label_ac, '2' %>
-      <%= label :label_ac, t('call4.form.label_ac_two') %>
-      <%= f.radio_button :label_ac, '3' %>
-      <%= label :label_ac, t('call4.form.label_ac_three') %>
-      <%= f.radio_button :label_ac, '4' %>
-      <%= label :label_ac, t('call4.form.label_ac_four') %>
-    </div>
+    <%= f.label :label_ac, t('call4.form.label_ac'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :label_ac, 1, :class=>'radio' %>
+          <%= t('call4.form.label_ac_one') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_ac, 2, :class=>'radio' %>
+          <%= t('call4.form.label_ac_two') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_ac, 3, :class=>'radio' %>
+          <%= t('call4.form.label_ac_three') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_ac, 4, :class=>'radio' %>
+          <%= t('call4.form.label_ac_four') %>  
+        </label>
+      </div>
   </div>
   <div class="control-group">
     <span class="label">AD</span>
-    <%= label :label_ad, t('call4.form.label_ad'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :label_ad, true %>
-      <%= label :label_ad, t('call4.form.label_ad_one') %>
-      <%= f.radio_button :label_ad, false %>
-      <%= label :label_ad, t('call4.form.label_ad_two') %>
-    </div>
+    <%= f.label :label_ad, t('call4.form.label_ad'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :label_ad, true, :class=>'radio' %>
+          <%= t('call4.form.label_ad_one') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_ad, false, :class=>'radio' %>
+          <%= t('call4.form.label_ad_two') %>  
+        </label>
+      </div>
   </div>
   <div class="control-group">
     <span class="label">AF</span>
-    <%= label :label_af, t('call4.form.label_af'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :label_af, true %>
-      <%= label :label_af, t('call4.form.label_af_one') %>
-      <%= f.radio_button :label_af, false %>
-      <%= label :label_af, t('call4.form.label_af_two') %>
-    </div>
+    <%= f.label :label_af, t('call4.form.label_af'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :label_af, true, :class=>'radio' %>
+          <%= t('call4.form.label_af_one') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_af, false, :class=>'radio' %>
+          <%= t('call4.form.label_af_two') %>  
+        </label>
+      </div>
   </div>
   <div class="control-group">
     <span class="label">AG</span>
-    <%= label :label_ag, t('call4.form.label_ag'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :label_ag, true %>
-      <%= label :label_ag, t('call4.form.label_ag_one') %>
-      <%= f.radio_button :label_ag, false %>
-      <%= label :label_ag, t('call4.form.label_ag_two') %>
-    </div>
-  </div>
+    <%= f.label :label_ag, t('call4.form.label_ag'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :label_ag, true, :class=>'radio' %>
+          <%= t('call4.form.label_ag_one') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_ag, false, :class=>'radio' %>
+          <%= t('call4.form.label_ag_two') %>  
+        </label>
+      </div>
+  </div>  
   <div class="control-group">
     <span class="label">AH</span>
-    <%= label :label_ah, t('call4.form.label_ah'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :label_ah, true %>
-      <%= label :label_ah, t('call4.form.label_ah_one') %>
-      <%= f.radio_button :label_ah, false %>
-      <%= label :label_ah, t('call4.form.label_ah_two') %>
-    </div>
+    <%= f.label :label_ah, t('call4.form.label_ah'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :label_ah, true, :class=>'radio' %>
+          <%= t('call4.form.label_ah_one') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_ah, false, :class=>'radio' %>
+          <%= t('call4.form.label_ah_two') %>  
+        </label>
+      </div>
   </div>
   <div class="control-group">
     <span class="label">AK</span>
-    <%= label :label_ak, t('call4.form.label_ak'), :class => 'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :label_ak, '1' %>
-      <%= label :label_ak, t('call4.form.label_ak_one') %>
-      <%= f.radio_button :label_ak, '2' %>
-      <%= label :label_ak, t('call4.form.label_ak_two') %>
-      <%= f.radio_button :label_ak, '3' %>
-      <%= label :label_ak, t('call4.form.label_ak_three') %>
-    </div>
+    <%= f.label :label_ak, t('call4.form.label_ak'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :label_ak, 1, :class=>'radio' %>
+          <%= t('call4.form.label_ak_one') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_ak, 2, :class=>'radio' %>
+          <%= t('call4.form.label_ak_two') %>  
+        </label>
+        <label class="radio">
+          <%= f.radio_button :label_ak, 3, :class=>'radio' %>
+          <%= t('call4.form.label_ak_three') %>  
+        </label>
+      </div>
   </div>
-
   <div class="form-actions">
     <%= f.submit t('app.buttons.save'), :class => 'btn btn-primary' %>
     <%= link_to t('app.buttons.cancel'),

@@ -1,6 +1,6 @@
-<%= form_for @call1, :html => { :class => 'form-horizontal' } do |f| %>
+<%= form_for(@call1, :html => { :class => 'form-horizontal' }) do |f| %>
   <%= f.error_messages %>
-  <%= field_set_tag 'საერთო ინფორმაცია', :class=>"label" do %>
+  <%= field_set_tag '', :class=>"label" do %>
   <div class="control-group">
     <%= label :fname, t('call1.form.fname'), :for=>'call1_fname', :class=>'control-label' %>
     <div class="controls">
@@ -28,13 +28,17 @@
   <% end %>
   <div class="control-group">
     <span class="label">C</span>
-    <%= label :c_label, t('call1.form.c_label'), :for=>'call1_c_label', :class=>'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :c_label, true %>
-      <%= label :c_label, t('call1.form.affirmative') %>
-      <%= f.radio_button :c_label, false %>
-      <%= label :c_label, t('call1.form.negative') %>
-    </div>
+    <%= f.label :c_label, t('call1.form.c_label'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :c_label, true, :class=>'radio' %>
+               დიახ
+        </label>
+        <label class="radio">
+          <%= f.radio_button :c_label, true, :class=>'radio' %>
+               არა
+        </label>
+      </div>
   </div>
   <div class="control-group">
     <span class="label">D</span>
@@ -59,35 +63,49 @@
   </div>
   <div class="control-group">
     <span class="label">G</span>
-    <%= label :g_label, t('call1.form.g_label'), :for=>'call1_g_label', :class=>'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :g_label, true %>
-      <%= label :g_label, t('call1.form.affirmative') %>
-      <%= f.radio_button :g_label, false %>
-      <%= label :g_label, t('call1.form.negative') %>
-    </div>
+    <%= f.label :g_label, t('call1.form.g_label'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :g_label, true, :class=>'radio' %>
+               დიახ
+        </label>
+        <label class="radio">
+          <%= f.radio_button :g_label, true, :class=>'radio' %>
+               არა
+        </label>
+      </div>
   </div>
   <div class="control-group">
     <span class="label">H</span>
-    <%= label :h_label, t('call1.form.h_label'), :for=>'call1_h_label', :class=>'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :h_label, true %>
-      <%= label :h_label, t('call1.form.affirmative') %>
-      <%= f.radio_button :h_label, false %>
-      <%= label :h_label, t('call1.form.negative') %>
-    </div>
+    <%= f.label :h_label, t('call1.form.h_label'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :h_label, true, :class=>'radio' %>
+               დიახ
+        </label>
+        <label class="radio">
+          <%= f.radio_button :h_label, true, :class=>'radio' %>
+               არა
+        </label>
+      </div>
   </div>
-   <div class="control-group">
-     <span class="label">K</span>
-     <%= label :k_label, t('call1.form.k_label'), :for=>'call1_k_label', :class=>'control-label' %>
-    <div class="controls">
-      <%= f.radio_button :k_label, '1' %>
-      <%= label :k_label, t('call1.form.k_label_one') %>
-      <%= f.radio_button :k_label, '2' %>
-      <%= label :k_label, t('call1.form.k_label_two') %>
-      <%= f.radio_button :k_label, '3' %>
-      <%= label :k_label, t('call1.form.k_label_three') %>
-    </div>
+  <div class="control-group">
+    <span class="label">K</span>
+    <%= f.label :k_label, t('call1.form.k_label'), :class=>'control-label' %>
+      <div class="controls">
+        <label class="radio">
+          <%= f.radio_button :k_label, 1, :class=>'radio' %>
+          <%= t('call1.form.k_label_one') %>
+        </label>
+        <label class="radio">
+          <%= f.radio_button :k_label, 2, :class=>'radio' %>
+          <%= t('call1.form.k_label_two') %>
+        </label>
+        <label class="radio">
+          <%= f.radio_button :k_label, 3, :class=>'radio' %>
+          <%= t('call1.form.k_label_three') %>
+        </label>
+      </div>
   </div>
   <div class="form-actions">
     <%= f.submit t('app.buttons.save'), :class => 'btn btn-primary' %>
