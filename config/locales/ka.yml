@@ -3,7 +3,7 @@ ka:
   activerecord:
     models:
     attributes:
-      
+        
   app:
     language:
       en: English
