@@ -11,13 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120924124903) do
+ActiveRecord::Schema.define(:version => 20120927162304) do
 
   create_table "call1s", :force => true do |t|
     t.string   "fname"
     t.string   "lname"
-    t.string   "dname"
-    t.string   "pname"
+    t.string   "district_id"
     t.boolean  "c_label"
     t.integer  "d_label"
     t.integer  "e_label"
@@ -27,13 +26,14 @@ ActiveRecord::Schema.define(:version => 20120924124903) do
     t.string   "k_label"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "precinct_id"
   end
 
   create_table "call2s", :force => true do |t|
     t.string   "fname"
     t.string   "lname"
-    t.string   "dname"
-    t.integer  "pname"
+    t.string   "district_id"
+    t.integer  "precinct_id"
     t.integer  "label_l"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -42,8 +42,8 @@ ActiveRecord::Schema.define(:version => 20120924124903) do
   create_table "call3s", :force => true do |t|
     t.string   "fname"
     t.string   "lname"
-    t.string   "dname"
-    t.integer  "pname"
+    t.string   "district_id"
+    t.integer  "precinct_id"
     t.integer  "label_m"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -52,8 +52,8 @@ ActiveRecord::Schema.define(:version => 20120924124903) do
   create_table "call4s", :force => true do |t|
     t.string   "fname"
     t.string   "lname"
-    t.string   "dname"
-    t.integer  "pname"
+    t.string   "district_id"
+    t.integer  "precinct_id"
     t.string   "label_n"
     t.string   "label_p"
     t.string   "label_q"
@@ -76,8 +76,8 @@ ActiveRecord::Schema.define(:version => 20120924124903) do
   create_table "call5s", :force => true do |t|
     t.string   "fname"
     t.string   "lname"
-    t.string   "dname"
-    t.integer  "pname"
+    t.string   "district_id"
+    t.integer  "precinct_id"
     t.boolean  "label_al"
     t.boolean  "label_am"
     t.boolean  "label_an"
@@ -93,8 +93,8 @@ ActiveRecord::Schema.define(:version => 20120924124903) do
   create_table "call6s", :force => true do |t|
     t.string   "fname"
     t.string   "lname"
-    t.string   "dname"
-    t.integer  "pname"
+    t.string   "district_id"
+    t.integer  "precinct_id"
     t.boolean  "label_a"
     t.boolean  "label_b"
     t.datetime "created_at"

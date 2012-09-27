@@ -14,19 +14,18 @@
     </div>
   </div>
   <div class="control-group">
-    <%= label :dname, t('call6.form.dname'), :class => 'control-label' %>
+    <%= label :district_id, t('call6.form.dname'), :for=>"call6_district_id", :class=>"control-label" %>
     <div class="controls">
-      <%= f.collection_select :dname, District.order(:dname), :id, :dname, include_blank: true %>
+      <%= f.collection_select :district_id, District.order(:dname), :id, :dname, include_blank: true %>
     </div>
   </div>
   <div class="control-group">
-    <%= label :pname, t('call6.form.pname'), :class => 'control-label' %>
+     <%= label :precinct_id, t('call6.form.pname'), :for=>"call6_precinct_id", :class=>"control-label" %>
     <div class="controls">
-      <%= f.grouped_collection_select :pname, District.order(:dname), :precincts, :dname, :id, :pname, include_blank: true %>
+      <%= f.grouped_collection_select :precinct_id, District.order(:dname), :precincts, :dname, :pname, :id, include_blank: true %>
     </div>
   </div>
   <% end %>
-  
   <div class="control-group">
     <span class="label">A</span>
     <%= f.label :label_a, t('call6.form.label_a'), :class=>'control-label' %>

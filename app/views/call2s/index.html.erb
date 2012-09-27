@@ -17,8 +17,8 @@
       <tr>
         <td><%= link_to call2.fname, call2_path(call2) %></td>
         <td><%= call2.lname %></td>
-        <td><%= call2.dname %></td>
-        <td><%= call2.pname %></td>
+        <td><%= call2.district_id %></td>
+        <td><%= call2.precinct_id %></td>
         <td>
           <%= link_to t('app.buttons.edit'),
                       edit_call2_path(call2), :class => 'btn btn-mini' %>

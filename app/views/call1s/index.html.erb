@@ -18,8 +18,8 @@
       <tr>
         <td><%= call1.fname %></td>
         <td><%= call1.lname %></td>
-        <td><%= link_to call1.dname,call1_path(call1) %></td>
-        <td><%= call1.pname %></td>
+        <td><%= link_to call1.district_id,call1_path(call1) %></td>
+        <td><%= call1.precinct_id %></td>
         <td><%=l call1.created_at %></td>
         <td>
           <%= link_to t('app.buttons.edit'),

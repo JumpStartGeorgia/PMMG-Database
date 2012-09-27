@@ -1,8 +1,13 @@
 class Call1 < ActiveRecord::Base
- attr_accessible :fname, :lname, :dname, :pname, :c_label, :d_label, :e_label, :f_label, :g_label, :h_label, :k_label
+  attr_accessible :fname, :lname, :district_id, :precinct_id, 
+                  :c_label, :d_label, :e_label, 
+                  :f_label, :g_label, :h_label, :k_label
 
-  validates :dname, :uniqueness => {:scope => :pname}
-  validates :fname, :lname, :pname, :dname, :presence => true
+  belongs_to :district
+  belongs_to :precinct
+  
+  validates :district_id, :uniqueness => {:scope => :precinct_id}
+  validates :fname, :lname, :precinct_id, :district_id, :presence => true
   
   def self.add_values(label)
     h = self.select(label)
