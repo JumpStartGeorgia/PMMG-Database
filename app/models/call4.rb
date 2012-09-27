@@ -5,6 +5,7 @@ class Call4 < ActiveRecord::Base
                   :label_af, :label_ag, :label_ah, :label_ak  
     
   validates :dname, :uniqueness => {:scope => :pname}
+  validates :fname, :lname, :pname, :dname, :presence => true
 
   def self.add_values(label)
     h = self.select(label)

@@ -2,8 +2,43 @@
 ka:
   activerecord:
     models:
+      call1: პირველი დარეკვა
+      call2: მე-2 დარეკვა
+      call3: მე-3 დარეკვა
+      call4: მე-4 დარეკვა
+      call5: მე-5 დარეკვა
+      call6: მე-6 დარეკვა
     attributes:
-        
+      call1:
+        fname: სახელი
+        lname: გვარი
+        dname: ოლქის დასახლება
+        pname: უბნის ნომერი
+      call2:
+        fname: სახელი
+        lname: გვარი
+        dname: ოლქის დასახლება
+        pname: უბნის ნომერი
+      call3:
+        fname: სახელი
+        lname: გვარი
+        dname: ოლქის დასახლება
+        pname: უბნის ნომერი
+      call4:
+        fname: სახელი
+        lname: გვარი
+        dname: ოლქის დასახლება
+        pname: უბნის ნომერი      
+      call5:
+        fname: სახელი
+        lname: გვარი
+        dname: ოლქის დასახლება
+        pname: უბნის ნომერი      
+      call6:
+        fname: სახელი
+        lname: გვარი
+        dname: ოლქის დასახლება
+        pname: უბნის ნომერი        
   app:
     language:
       en: English

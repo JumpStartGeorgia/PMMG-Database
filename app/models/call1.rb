@@ -2,6 +2,7 @@ class Call1 < ActiveRecord::Base
  attr_accessible :fname, :lname, :dname, :pname, :c_label, :d_label, :e_label, :f_label, :g_label, :h_label, :k_label
 
   validates :dname, :uniqueness => {:scope => :pname}
+  validates :fname, :lname, :pname, :dname, :presence => true
   
   def self.add_values(label)
     h = self.select(label)
