@@ -22,19 +22,15 @@
         <td><%= call1.pname %></td>
         <td><%=l call1.created_at %></td>
         <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+          <%= link_to t('app.buttons.edit'),
                       edit_call1_path(call1), :class => 'btn btn-mini' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+          <%= link_to t('app.buttons.delete'),
                       call1_path(call1),
                       :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :data => { :confirm => t('app.buttons.confirm') },
                       :class => 'btn btn-mini btn-danger' %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_call1_path,
-            :class => 'btn btn-primary' %>

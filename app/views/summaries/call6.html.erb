@@ -3,17 +3,17 @@
 <h2>საერთო ინფორმაცია</h2>
 
 <ul class="standard">
-  <li>Total number of precincts being observed: <%= @total_precincts.length %></li>
-  <li>Number of precincts reported: <%= @precincts.length %> precincts</li>
-  <li>Percent of precincts reporting: <%= number_to_percentage(@precincts.length.to_f / @total_precincts.length) %></li>
+  <li>მთლიანი რაოდენობა უბნებისა, სადაც დაკვირვება განხორციელდა: <%= @total_precincts.length %></li>
+  <li>უბნების რაოდენობა, საიდანაც განხორციელდა ანგარიშგება: <%= @precincts.length %> precincts</li>
+  <li>უბნების პროცენტული რაოდენობა, საიდანაც განხორციელდა ანგარიშგება: <%= number_to_percentage(@precincts.length.to_f / @total_precincts.length) %></li>
 </ul>
 <br />
 
-<h2>პერველი დარეკვის დეტალურ ინფორმაცია</h2>
+<h2>დეტალური ინფორმაცია</h2>
 
 <ul class="standard">
-  <li>Number of precincts where observer's right was restricted at any stage of the precinct's operation, preparation, ballot-casting, and vote-councting: <%= @restrictions %></li>
-  <li>Percent of precincts where observer's right was restricted at any stage of the precinct's operation, preparation, ballot-casting, and vote-councting: <%= number_to_percentage(@restrictions.to_f / @total_precincts.length) %></li>
+  <li>ხომ არ შეგეზღუდათ დაკვირვების უფლება საარჩევნო უბნის მუშაობის რომელიმე ეტაპზე: მოსამზადებელი, ხმის მიცემისა და დათვლის პროცესის დროს?: <%= number_to_percentage(@restrictions / @precincts.length) %></li>
+  <li>ხომ არ შეფერხდა მოსამზადებელი, ხმის მიცემის ან დათვლის პროცესი?: <%= number_to_percentage(@restrictions.to_f / @precincts.length) %></li>
 </ul>
 <br />
 

@@ -1,46 +1,34 @@
 <%- model_class = Call6 -%>
 <div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+  <h1>მე-6 დარეკვა</h1>
 </div>
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:fname) %></th>
-      <th><%= model_class.human_attribute_name(:lname) %></th>
-      <th><%= model_class.human_attribute_name(:dname) %></th>
-      <th><%= model_class.human_attribute_name(:pname) %></th>
-      <th><%= model_class.human_attribute_name(:label_a) %></th>
-      <th><%= model_class.human_attribute_name(:label_b) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th>სახელი</th>
+      <th>გვარი</th>
+      <th>ოლქის დასახლება</th>
+      <th>უბნის ნომერი</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <% @call6s.each do |call6| %>
       <tr>
-        <td><%= link_to call6.id, call6_path(call6) %></td>
-        <td><%= call6.fname %></td>
+        <td><%= link_to call6.fname, call6_path(call6) %></td>
         <td><%= call6.lname %></td>
         <td><%= call6.dname %></td>
         <td><%= call6.pname %></td>
-        <td><%= call6.label_a %></td>
-        <td><%= call6.label_b %></td>
-        <td><%=l call6.created_at %></td>
         <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+          <%= link_to t('app.buttons.edit'),
                       edit_call6_path(call6), :class => 'btn btn-mini' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+          <%= link_to t('app.buttons.delete', :default => t("helpers.links.destroy")),
                       call6_path(call6),
                       :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :data => { :confirm => t('app.buttons.confirm') },
                       :class => 'btn btn-mini btn-danger' %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_call6_path,
-            :class => 'btn btn-primary' %>

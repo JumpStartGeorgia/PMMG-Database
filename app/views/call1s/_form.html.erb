@@ -1,4 +1,6 @@
 <%= form_for @call1, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.error_messages %>
+  <%= field_set_tag 'საერთო ინფორმაცია', :class=>"label" do %>
   <div class="control-group">
     <%= label :fname, t('call1.form.fname'), :for=>'call1_fname', :class=>'control-label' %>
     <div class="controls">
@@ -23,7 +25,9 @@
       <%= f.grouped_collection_select :pname, District.order(:dname), :precincts, :dname, :id, :pname, include_blank: true %>
     </div>
   </div>
+  <% end %>
   <div class="control-group">
+    <span class="label">C</span>
     <%= label :c_label, t('call1.form.c_label'), :for=>'call1_c_label', :class=>'control-label' %>
     <div class="controls">
       <%= f.radio_button :c_label, true %>
@@ -33,24 +37,28 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">D</span>
     <%= label :d_label, t('call1.form.d_label'), :for=>'call1_d_label', :class=>'control-label' %>
     <div class="controls">
       <%= f.number_field :d_label, :class => 'number_field' %>
     </div>
   </div>
   <div class="control-group">
+    <span class="label">E</span>
     <%= label :e_label, t('call1.form.e_label'), :for=>'call1_e_label', :class=>'control-label' %>
     <div class="controls">
       <%= f.number_field :e_label, :class => 'number_field' %>
     </div>
   </div>
   <div class="control-group">
+    <span class="label">F</span>
     <%= label :f_label, t('call1.form.f_label'), :for=>'call1_f_label', :class=>'control-label' %>
     <div class="controls">
       <%= f.number_field :f_label, :class => 'number_field' %>
     </div>
   </div>
   <div class="control-group">
+    <span class="label">G</span>
     <%= label :g_label, t('call1.form.g_label'), :for=>'call1_g_label', :class=>'control-label' %>
     <div class="controls">
       <%= f.radio_button :g_label, true %>
@@ -60,6 +68,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">H</span>
     <%= label :h_label, t('call1.form.h_label'), :for=>'call1_h_label', :class=>'control-label' %>
     <div class="controls">
       <%= f.radio_button :h_label, true %>
@@ -69,6 +78,7 @@
     </div>
   </div>
    <div class="control-group">
+     <span class="label">K</span>
      <%= label :k_label, t('call1.form.k_label'), :for=>'call1_k_label', :class=>'control-label' %>
     <div class="controls">
       <%= f.radio_button :k_label, '1' %>

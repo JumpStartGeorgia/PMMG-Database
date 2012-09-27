@@ -1,4 +1,5 @@
 <%= form_for @call4, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= field_set_tag 'საერთო ინფორმაცია', :class=>"label" do %>
   <div class="control-group">
     <%= label :fname, t('call4.form.fname'), :class => 'control-label' %>
     <div class="controls">
@@ -23,7 +24,9 @@
       <%= f.grouped_collection_select :pname, District.order(:dname), :precincts, :dname, :id, :pname, include_blank: true %>
     </div>
   </div>
+  <% end %>
   <div class="control-group">
+    <span class="label">N</span>
     <%= label :label_n, t('call4.form.label_n'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_n, '1' %>
@@ -37,6 +40,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">P</span>
     <%= label :label_p, t('call4.form.label_p'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_p, '1' %>
@@ -50,6 +54,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">Q</span>
     <%= label :label_q, t('call4.form.label_q'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_q, '1' %>
@@ -63,6 +68,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">R</span>
     <%= label :label_r, t('call4.form.label_r'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_r, '1' %>
@@ -76,6 +82,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">S</span>
     <%= label :label_s, t('call4.form.label_s'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_s, '1' %>
@@ -89,6 +96,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">T</span>
     <%= label :label_t, t('call4.form.label_t'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_t, '1' %>
@@ -102,6 +110,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">U</span>
     <%= label :label_u, t('call4.form.label_u'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_u, '1' %>
@@ -115,6 +124,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">Z</span>
     <%= label :label_z, t('call4.form.label_z'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_z, '1' %>
@@ -128,6 +138,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">AB</span>
     <%= label :label_ab, t('call4.form.label_ab'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_ab, '1' %>
@@ -141,6 +152,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">AC</span>
     <%= label :label_ac, t('call4.form.label_ac'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_ac, '1' %>
@@ -154,6 +166,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">AD</span>
     <%= label :label_ad, t('call4.form.label_ad'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_ad, true %>
@@ -163,6 +176,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">AF</span>
     <%= label :label_af, t('call4.form.label_af'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_af, true %>
@@ -172,6 +186,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">AG</span>
     <%= label :label_ag, t('call4.form.label_ag'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_ag, true %>
@@ -181,7 +196,8 @@
     </div>
   </div>
   <div class="control-group">
-    <%= label :label_ag, t('call4.form.label_ah'), :class => 'control-label' %>
+    <span class="label">AH</span>
+    <%= label :label_ah, t('call4.form.label_ah'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_ah, true %>
       <%= label :label_ah, t('call4.form.label_ah_one') %>
@@ -190,6 +206,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">AK</span>
     <%= label :label_ak, t('call4.form.label_ak'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_ak, '1' %>

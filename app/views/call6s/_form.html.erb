@@ -1,4 +1,5 @@
 <%= form_for @call6, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= field_set_tag 'საერთო ინფორმაცია', :class=>"label" do %>
   <div class="control-group">
     <%= label :fname, t('call6.form.fname'), :class => 'control-label' %>
     <div class="controls">
@@ -23,7 +24,9 @@
       <%= f.grouped_collection_select :pname, District.order(:dname), :precincts, :dname, :id, :pname, include_blank: true %>
     </div>
   </div>
+  <% end %>
   <div class="control-group">
+    <span class="label">A</span>
     <%= label :label_a, t('call6.form.label_a'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_a, true %>
@@ -33,6 +36,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">B</span>
     <%= label :label_b, t('call6.form.label_b'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_b, true %>

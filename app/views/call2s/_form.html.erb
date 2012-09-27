@@ -1,4 +1,5 @@
 <%= form_for @call2, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= field_set_tag 'საერთო ინფორმაცია', :class=>"label" do %>
   <div class="control-group">
     <%= label :fname, t('call2.form.fname'), :class => 'control-label' %>
     <div class="controls">
@@ -23,7 +24,9 @@
       <%= f.grouped_collection_select :pname, District.order(:dname), :precincts, :dname, :id, :pname, include_blank: true   %>
     </div>  
   </div>
+  <% end %>
   <div class="control-group">
+    <span class="label">L</span>
     <%= label :label_l, t('call2.form.label_l'), :class => 'control-label' %>
     <div class="controls">
       <%= f.number_field :label_l, :class => 'number_field' %>

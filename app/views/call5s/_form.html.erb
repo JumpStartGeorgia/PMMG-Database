@@ -1,4 +1,5 @@
 <%= form_for @call5, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= field_set_tag 'საერთო ინფორმაცია', :class=>"label" do %>
   <div class="control-group">
     <%= label :fname, t('call5.form.fname'), :class => 'control-label' %>
     <div class="controls">
@@ -23,7 +24,9 @@
       <%= f.grouped_collection_select :pname, District.order(:dname), :precincts, :dname, :id, :pname, include_blank: true %>
     </div>
   </div>
+  <% end %>
   <div class="control-group">
+    <span class="label">AL</span>
     <%= label :label_al, t('call5.form.label_al'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_al, true %>
@@ -33,6 +36,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">AM</span>
     <%= label :label_am, t('call5.form.label_am'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_am, true %>
@@ -42,6 +46,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">AN</span>
     <%= label :label_an, t('call5.form.label_an'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_an, true %>
@@ -51,6 +56,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">AP</span>
     <%= label :label_ap, t('call5.form.label_ap'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_ap, true %>
@@ -60,6 +66,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">AQ</span>
     <%= label :label_aq, t('call5.form.label_aq'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_aq, true %>
@@ -69,6 +76,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">AR</span>
     <%= label :label_ar, t('call5.form.label_ar'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_ar, true %>
@@ -78,6 +86,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">AS</span>
     <%= f.label :label_as, t('call5.form.label_as'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_as, true %>
@@ -87,6 +96,7 @@
     </div>
   </div>
   <div class="control-group">
+    <span class="label">AT</span>
     <%= f.label :label_at, t('call5.form.label_at'), :class => 'control-label' %>
     <div class="controls">
       <%= f.radio_button :label_at, true %>

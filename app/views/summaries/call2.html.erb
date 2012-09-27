@@ -1,18 +1,18 @@
-<div class="page-header"><h1>პირველი დარეკვის ანგარიში</h1></div>
+<div class="page-header"><h1>მე-2 დარეკვის ანგარიში</h1></div>
 
 <h2>საერთო ინფორმაცია</h2>
 
 <ul class="standard">
-  <li>Number of precincts reported: <%= @precincts.length %> precincts</li>
-  <li>Percent of precincts reporting: <%= number_to_percentage(@precincts.length.to_f / @total_precincts.length) %></li>
+  <li>მთლიანი რაოდენობა უბნებისა, სადაც დაკვირვება განხორციელდა: <%= @total_precincts.length %></li>
+  <li>უბნების რაოდენობა, საიდანაც განხორციელდა ანგარიშგება: <%= @precincts.length %></li>
+  <li>უბნების პროცენტული რაოდენობა, საიდანაც განხორციელდა ანგარიშგება: <%= number_to_percentage(@precincts.length.to_f / @total_precincts.length) %></li>
 </ul>
 <br />
 
-<h2>პერველი დარეკვის დეტალურ ინფორმაცია</h2>
+<h2>დეტალური ინფორმაცია</h2>
 
 <ul class="standard">
-  <li>Total number of signatures in all types of lists by 12:00: <%= @signatures %></li>
-  
+  <li>ამომრჩეველთა ხელმოწერების რაოდენობა ყველა სახის სიაში 12:00 საათისთვის (მე-2 დარეკვა 13:00 სთ-ზე): <%= @signatures %></li>
 </ul>
 <br />
 

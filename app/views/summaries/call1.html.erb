@@ -3,25 +3,25 @@
 <h2>საერთო ინფორმაცია</h2>
 
 <ul class="standard">
-  <li>Total number of precincts being observed: <%= @total_precincts.length %></li>
-  <li>Number of precincts reported: <%= @precincts.length %> precincts</li>
-  <li>Percent of precincts reporting: <%= number_to_percentage(@precincts.length.to_f / @total_precincts.length) %></li>
+  <li>მთლიანი რაოდენობა უბნებისა, სადაც დაკვირვება განხორციელდა: <%= @total_precincts.length %></li>
+  <li>უბნების რაოდენობა, საიდანაც განხორციელდა ანგარიშგება: <%= @precincts.length %></li>
+  <li>უბნების პროცენტული რაოდენობა, საიდანაც განხორციელდა ანგარიშგება: <%= number_to_percentage(@precincts.length.to_f / @total_precincts.length) %></li>
 </ul>
 <br />
 
-<h2>პერველი დარეკვის დეტალურ ინფორმაცია</h2>
+<h2>დეტალური ინფორმაცია</h2>
 
 <ul class="standard">
-  <li>Percent of precincts opening on time (7:00): <%= @on_time %></li>
-  <li>Overall number of voters in <strong>general</strong> list: <%= @voters_general %></li>
-  <li>Overall number of voters in <strong>special</strong> list: <%= @voters_special %></li>
-  <li>Overall number of voters in <strong>mobile</strong> list: <%= @voters_mobile %></li>
-  <li>Percent of precincts having all electoral materials: <%= number_to_percentage(@e_materials.to_f / @precincts.length) %></li>
-  <li>Percent of precincts where confidentiality is maintained: <%= number_to_percentage(@confide.to_f / @precincts.length) %></li>
-  <li>Were the precint's opening procedures conducted according to law?<ul>
-    <li>Yes, process was conducted well: <%= @legal_one %></li>
-    <li>Basically well, but with minor shortcomings: <%= @legal_two %></li>
-    <li>No, the process was conducted with violations: <%= @legal_three %></li>
+  <li>გაიხსნა თუ არა საარჩევნო უბანი დროულად - 07:00 საათზე?: <%= number_to_percentage(@on_time.to_f / @precincts.length) %></li>
+  <li>ამომრჩეველთა საერთო რაოდენობა ერთიან სიაში (ოქმის 1-ელი გრაფა): <%= @voters_general %></li>
+  <li>ამომრჩეველთა რაოდენობა სპეციალურ სიაში (ოქმის მე-2 გრაფა): <%= @voters_special %></li>
+  <li>გადასატანი საარჩევნო ყუთის სიაში არსებულ ამომრჩეველთა რაოდენობა (მოიძიეთ  მდივანთან): <%= @voters_mobile %></li>
+  <li>ჰქონდა თუ არა საარჩევნო უბანს ყველა საჭირო მასალა?: <%= number_to_percentage(@e_materials.to_f / @precincts.length) %></li>
+  <li>შექმნილია თუ არა კენჭისყრის ფარულობისთვის საჭირო პირობები?: <%= number_to_percentage(@confide.to_f / @precincts.length) %></li>
+  <li>ჩატარდა თუ არა უბნის გახსნის პროცედურები დადგენილი კანონმდებლობის შესაბამისად?<ul>
+    <li>დიახ, პროცესი ჩატარდა კარგად: <%= number_to_percentage(@legal_one.to_f / @precincts.length) %></li>
+    <li>ძირითადად კარგად, თუმცა მცირედი ხარვეზებით: <%= number_to_percentage(@legal_two.to_f / @precincts.length) %></li>
+    <li>არა, პროცესი ჩატარდა  დარღვევებით: <%= number_to_percentage(@legal_three.to_f / @precincts.length) %></li>
   </ul></li>
 </ul>
 <br />
