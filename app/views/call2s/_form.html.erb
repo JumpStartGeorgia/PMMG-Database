@@ -22,8 +22,8 @@
   <div class="control-group">
     <%= label :precinct_id, t('call2.form.pname'), :for=>"call2_precinct_id", :class=>"control-label" %>
     <div class="controls">
-      <%= f.grouped_collection_select :precinct_id, District.order(:dname), :precincts, :dname, :pname, :id, include_blank: true %>
-    </div> 
+      <%= f.grouped_collection_select :precinct_id, District.order(:dname), :precincts, :dname, :id, :pname, include_blank: true %>
+    </div>
   </div>
   <% end %>
   <div class="control-group">
