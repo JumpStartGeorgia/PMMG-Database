@@ -3,18 +3,32 @@
   <h1><%=t 'call2.form.edit.title' %></h1>
 </div>
 
-<dl class="dl-horizontal">
-  <dt><strong>სახელი:</strong></dt>
-  <dd><%= @call2.fname %></dd>
-  <dt><strong>გვარი:</strong></dt>
-  <dd><%= @call2.lname %></dd>
-  <dt><strong>ოლქი:</strong></dt>
-  <dd><%= @call2.district.dname %></dd>
-  <dt><strong>უბანი:</strong></dt>
-  <dd><%= @call2.precinct.pname %></dd>
-  <dt><strong>L:</strong></dt>
-  <dd><%= @call2.label_l %></dd>
-</dl>
+<div class="row span9">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td>სახელი</td>
+        <td><%= @call2.fname %></td>
+      </tr>
+      <tr>
+        <td>გვარი</td>
+        <td><%= @call2.lname %></td>
+      </tr>
+      <tr>
+        <td>ოლქი</td>
+        <td><%= @call2.district.dname %></td>
+      </tr>
+      <tr>
+        <td>უბანი</td>
+        <td><%= @call2.precinct.pname %></td>
+      </tr>
+      <tr>
+        <td>N</td>
+        <td><%= @call2.label_l %></td>
+      </tr
+    </tbody>
+  </table>
+</div>
 
 <div class="form-actions">
   <%= link_to t('app.buttons.back'),

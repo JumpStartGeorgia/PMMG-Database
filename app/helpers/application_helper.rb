@@ -1,3 +1,4 @@
+# encoding: utf-8
 module ApplicationHelper
   def title(page_title)
     content_for(:title) { page_title }
@@ -48,5 +49,15 @@ module ApplicationHelper
 
   def page_navigation_links(pages)
     will_paginate(pages, :class => 'pagination', :inner_window => 2, :outer_window => 0, :renderer => BootstrapLinkRenderer, :previous_label => '&larr;'.html_safe, :next_label => '&rarr;'.html_safe)
+  end
+  
+  def yn_label(value)
+    if value.nil?
+      ''
+    elsif value == true
+      'დიახ'
+    else value == false
+      'არა'
+    end
   end
 end

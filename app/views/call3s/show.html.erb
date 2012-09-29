@@ -3,18 +3,32 @@
   <h1>მე-3 დარეკვა</h1>
 </div>
 
-<dl class="dl-horizontal">
-  <dt><strong>სახელი:</strong></dt>
-  <dd><%= @call3.fname %></dd>
-  <dt><strong>გვარი:</strong></dt>
-  <dd><%= @call3.lname %></dd>
-  <dt><strong>ოლქი:</strong></dt>
-  <dd><%= @call3.district.dname %></dd>
-  <dt><strong>უბანი:</strong></dt>
-  <dd><%= @call3.precinct.pname %></dd>
-  <dt><strong>M:</strong></dt>
-  <dd><%= @call3.label_m %></dd>
-</dl>
+<div class="row span9">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td>სახელი</td>
+        <td><%= @call3.fname %></td>
+      </tr>
+      <tr>
+        <td>გვარი</td>
+        <td><%= @call3.lname %></td>
+      </tr>
+      <tr>
+        <td>ოლქი</td>
+        <td><%= @call3.district.dname %></td>
+      </tr>
+      <tr>
+        <td>უბანი</td>
+        <td><%= @call3.precinct.pname %></td>
+      </tr>
+      <tr>
+        <td>N</td>
+        <td><%= @call3.label_m %></td>
+      </tr
+    </tbody>
+  </table>
+</div>
 
 <div class="form-actions">
   <%= link_to t('app.buttons.back'),

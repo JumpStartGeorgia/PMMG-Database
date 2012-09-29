@@ -3,115 +3,55 @@
   <h1><%= t('call1.form.edit.title') %></h1>
 </div>
 
-<div>
-  <div class="row">
-    <div class="header span2">
-        სახელი:
-    </div>
-    <div class="content span6">
-      <%= @call1.fname %>
-    </div>
-  </div>
-</div>
-<div>
-  <div class="row">
-    <div class="header span2">
-        გვარი:
-    </div>
-    <div class="content span6">
-      <%= @call1.lname %>
-    </div>
-  </div>
-</div>
-<div>
-  <div class="row">
-    <div class="header span2">
-        ოლქი:
-    </div>
-    <div class="content span6">
-      <%= @call1.district.dname %>
-    </div>
-  </div>
-</div>
-<div>
-  <div class="row">
-    <div class="header span2">
-        უბანი:
-    </div>
-    <div class="content span6">
-      <%= @call1.precinct.pname %>
-    </div>
-  </div>
-</div>
-<div>
-  <div class="row">
-    <div class="header span2">
-      C:
-    </div>
-    <div class="content span6">
-      <%= yn_label(@call1.c_label) %>
-    </div>
-  </div>
-</div>
-<div>
-  <div class="row">
-    <div class="header span2">
-      D:
-    </div>
-    <div class="content span6">
-      <%= yn_label(@call1.d_label) %>
-    </div>
-  </div>
-</div>
-<div>
-  <div class="row">
-    <div class="header span2">
-      E:
-    </div>
-    <div class="content span6">
-      <%= yn_label(@call1.e_label) %>
-    </div>
-  </div>
-</div>
-<div>
-  <div class="row">
-    <div class="header span2">
-      F:
-    </div>
-    <div class="content span6">
-      <%= yn_label(@call1.f_label) %>
-    </div>
-  </div>
-</div>
-<div>
-  <div class="row">
-    <div class="header span2">
-      G:
-    </div>
-    <div class="content span6">
-      <%= yn_label(@call1.g_label) %>
-    </div>
-  </div>
-</div>
-<div>
-  <div class="row">
-    <div class="header span2">
-      H:
-    </div>
-    <div class="content span6">
-      <%= yn_label(@call1.h_label) %>
-    </div>
-  </div>
-</div>
-<div>
-  <div class="row">
-    <div class="header span2">
-      K:
-    </div>
-    <div class="content span6">
-      <%= yn_label(@call1.k_label) %>
-    </div>
-  </div>
+<div class="row span9">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td>სახელი</td>
+        <td><%= @call1.fname %></td>
+      </tr>
+      <tr>
+        <td>გვარი</td>
+        <td><%= @call1.lname %></td>
+      </tr>
+      <tr>
+        <td>ოლქი</td>
+        <td><%= @call1.district.dname %></td>
+      </tr>
+      <tr>
+        <td>უბანი</td>
+        <td><%= @call1.precinct.pname %></td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td><%= yn_label(@call1.c_label) %></td>
+      </tr>
+      <tr>
+        <td>D</td>
+        <td><%= yn_label(@call1.d_label) %></td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td><%= yn_label(@call1.e_label) %></td>
+      </tr>      
+      <tr>
+        <td>F</td>
+        <td><%= yn_label(@call1.f_label) %></td>
+      </tr>
+      <tr>
+        <td>G</td>
+        <td><%= yn_label(@call1.g_label) %></td>
+      </tr>
+      <tr>
+        <td>H</td>
+        <td><%= yn_label(@call1.h_label) %></td>
+      </tr>
+      <tr>
+        <td>K</td>
+        <td><%= yn_label(@call1.k_label) %></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <dl class="dl-horizontal">

@@ -3,32 +3,60 @@
   <h1>მე-5 დარეკვა</h1>
 </div>
 
-<dl class="dl-horizontal">
-  <dt><strong>სახელი</strong></dt>
-  <dd><%= @call5.fname %></dd>
-  <dt><strong>გვარი:</strong></dt>
-  <dd><%= @call5.lname %></dd>
-  <dt><strong>ოლქი:</strong></dt>
-  <dd><%= @call5.district.dname %></dd>
-  <dt><strong>უბანი:</strong></dt>
-  <dd><%= @call5.precinct.pname %></dd>
-  <dt><strong>AL:</strong></dt>
-  <dd><%= @call5.label_al %></dd>
-  <dt><strong>AM:</strong></dt>
-  <dd><%= @call5.label_am %></dd>
-  <dt><strong>AN:</strong></dt>
-  <dd><%= @call5.label_an %></dd>
-  <dt><strong>AP:</strong></dt>
-  <dd><%= @call5.label_ap %></dd>
-  <dt><strong>AQ:</strong></dt>
-  <dd><%= @call5.label_aq %></dd>
-  <dt><strong>AR:</strong></dt>
-  <dd><%= @call5.label_ar %></dd>
-  <dt><strong>AR:</strong></dt>
-  <dd><%= @call5.label_as %></dd>
-  <dt><strong>AT:</strong></dt>
-  <dd><%= @call5.label_at %></dd>
-</dl>
+<div class="row span9">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td>სახელი</td>
+        <td><%= @call5.fname %></td>
+      </tr>
+      <tr>
+        <td>გვარი</td>
+        <td><%= @call5.lname %></td>
+      </tr>
+      <tr>
+        <td>ოლქი</td>
+        <td><%= @call5.district.dname %></td>
+      </tr>
+      <tr>
+        <td>უბანი</td>
+        <td><%= @call5.precinct.pname %></td>
+      </tr>
+      <tr>
+        <td>AL</td>
+        <td><%= yn_label(@call5.label_al) %></td>
+      </tr>
+      <tr>
+        <td>AM</td>
+        <td><%= yn_label(@call5.label_am) %></td>
+      </tr>
+      <tr>
+        <td>AN</td>
+        <td><%= yn_label(@call5.label_an) %></td>
+      </tr>
+      <tr>
+        <td>AP</td>
+        <td><%= yn_label(@call5.label_ap) %></td>
+      </tr>      
+      <tr>
+        <td>AQ</td>
+        <td><%= yn_label(@call5.label_aq) %></td>
+      </tr>
+      <tr>
+        <td>AR</td>
+        <td><%= yn_label(@call5.label_ar) %></td>
+      </tr>
+      <tr>
+        <td>AS</td>
+        <td><%= yn_label(@call5.label_as) %></td>
+      </tr>
+      <tr>
+        <td>AT</td>
+        <td><%= yn_label(@call5.label_at) %></td>
+      </tr>      
+    </tbody>
+  </table>
+</div>
 
 <div class="form-actions">
   <%= link_to t('app.buttons.back'),
