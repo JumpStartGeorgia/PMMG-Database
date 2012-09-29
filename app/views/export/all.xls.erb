@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="ზარი1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">ოლქის დასახლება</Data></Cell>
+        <Cell><Data ss:Type="String">უბანის ნომერი</Data></Cell>
+        <Cell><Data ss:Type="String">სახელი</Data></Cell>
+        <Cell><Data ss:Type="String">გვარი</Data></Cell>
+        <Cell><Data ss:Type="String">C</Data></Cell>
+        <Cell><Data ss:Type="String">D</Data></Cell>
+        <Cell><Data ss:Type="String">E</Data></Cell>
+        <Cell><Data ss:Type="String">F</Data></Cell>
+        <Cell><Data ss:Type="String">G</Data></Cell>
+        <Cell><Data ss:Type="String">H</Data></Cell>
+        <Cell><Data ss:Type="String">K</Data></Cell>
+      </Row>
+    <% @call1.each do |call1| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= call1.district.dname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call1.precinct.pname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call1.fname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call1.lname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= yn_label(call1.c_label) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call1.d_label %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call1.e_label %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call1.f_label %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= yn_label(call1.g_label) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= yn_label(call1.h_label) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call1.k_label %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+  <Worksheet ss:Name="ზარი2">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">ოლქის დასახლება</Data></Cell>
+        <Cell><Data ss:Type="String">უბანის ნომერი</Data></Cell>
+        <Cell><Data ss:Type="String">სახელი</Data></Cell>
+        <Cell><Data ss:Type="String">გვარი</Data></Cell>
+        <Cell><Data ss:Type="String"></Data></Cell>
+      </Row>
+    <% @call2.each do |call2| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= call2.district.dname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call2.precinct.pname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call2.fname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call2.lname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call2.label_l %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+  <Worksheet ss:Name="ზარი3">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">ოლქის დასახლება</Data></Cell>
+        <Cell><Data ss:Type="String">უბანის ნომერი</Data></Cell>
+        <Cell><Data ss:Type="String">სახელი</Data></Cell>
+        <Cell><Data ss:Type="String">გვარი</Data></Cell>
+        <Cell><Data ss:Type="String">M</Data></Cell>
+      </Row>
+    <% @call3.each do |call3| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= call3.district.dname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call3.precinct.pname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call3.fname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call3.lname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call3.label_m %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+    <Worksheet ss:Name="ზარი4">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">ოლქის დასახლება</Data></Cell>
+        <Cell><Data ss:Type="String">უბანის ნომერი</Data></Cell>
+        <Cell><Data ss:Type="String">სახელი</Data></Cell>
+        <Cell><Data ss:Type="String">გვარი</Data></Cell>
+        <Cell><Data ss:Type="String">N</Data></Cell>
+        <Cell><Data ss:Type="String">P</Data></Cell>
+        <Cell><Data ss:Type="String">Q</Data></Cell>
+        <Cell><Data ss:Type="String">R</Data></Cell>
+        <Cell><Data ss:Type="String">S</Data></Cell>
+        <Cell><Data ss:Type="String">T</Data></Cell>
+        <Cell><Data ss:Type="String">U</Data></Cell>
+        <Cell><Data ss:Type="String">Z</Data></Cell>
+        <Cell><Data ss:Type="String">AB</Data></Cell>
+        <Cell><Data ss:Type="String">AC</Data></Cell>
+        <Cell><Data ss:Type="String">AD</Data></Cell>
+        <Cell><Data ss:Type="String">AF</Data></Cell>
+        <Cell><Data ss:Type="String">AG</Data></Cell>
+        <Cell><Data ss:Type="String">AH</Data></Cell>
+        <Cell><Data ss:Type="String">AK</Data></Cell>
+      </Row>
+    <% @call4.each do |call4| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= call4.district.dname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call4.precinct.pname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call4.fname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call4.lname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= n_label(call4.label_n) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= p_label(call4.label_p) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= q_label(call4.label_q) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= r_label(call4.label_r) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= s_label(call4.label_s) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= t_label(call4.label_t) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= u_label(call4.label_u) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= z_label(call4.label_z) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= ab_label(call4.label_ab) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= ac_label(call4.label_ac) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= yn_label(call4.label_ad) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= yn_label(call4.label_af) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= yn_label(call4.label_ag) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= yn_label(call4.label_ah) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= ak_label(call4.label_ak) %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+  <Worksheet ss:Name="ზარი5">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">ოლქის დასახლება</Data></Cell>
+        <Cell><Data ss:Type="String">უბანის ნომერი</Data></Cell>
+        <Cell><Data ss:Type="String">სახელი</Data></Cell>
+        <Cell><Data ss:Type="String">გვარი</Data></Cell>
+        <Cell><Data ss:Type="String">AL</Data></Cell>
+        <Cell><Data ss:Type="String">AM</Data></Cell>
+        <Cell><Data ss:Type="String">AN</Data></Cell>
+        <Cell><Data ss:Type="String">AP</Data></Cell>
+        <Cell><Data ss:Type="String">AQ</Data></Cell>
+        <Cell><Data ss:Type="String">AR</Data></Cell>
+        <Cell><Data ss:Type="String">AS</Data></Cell>
+        <Cell><Data ss:Type="String">AT</Data></Cell>
+      </Row>
+    <% @call5.each do |call5| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= call5.district.dname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call5.precinct.pname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call5.fname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call5.lname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= yn_label(call5.label_al) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= yn_label(call5.label_am) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= yn_label(call5.label_an) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= yn_label(call5.label_ap) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= yn_label(call5.label_aq) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= yn_label(call5.label_ar) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= yn_label(call5.label_as) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= yn_label(call5.label_at) %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+  <Worksheet ss:Name="ზარი6">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">ოლქის დასახლება</Data></Cell>
+        <Cell><Data ss:Type="String">უბანის ნომერი</Data></Cell>
+        <Cell><Data ss:Type="String">სახელი</Data></Cell>
+        <Cell><Data ss:Type="String">გვარი</Data></Cell>
+        <Cell><Data ss:Type="String">A</Data></Cell>
+        <Cell><Data ss:Type="String">B</Data></Cell>
+      </Row>
+    <% @call6.each do |call6| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= call6.district.dname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call6.precinct.pname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call6.fname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call6.lname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= yn_label(call6.label_a) %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= yn_label(call6.label_b) %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>

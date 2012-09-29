@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:x="urn:schemas-microsoft-com:office:excel"
+  xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+  xmlns:html="http://www.w3.org/TR/REC-html40">
+  <Worksheet ss:Name="ზარი1">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">ოლქის დასახლება</Data></Cell>
+        <Cell><Data ss:Type="String">უბანის ნომერი</Data></Cell>
+      </Row>
+    <% @call1.each do |call1| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= call1.district.dname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call1.pname %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+  <Worksheet ss:Name="ზარი2">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">ოლქის დასახლება</Data></Cell>
+        <Cell><Data ss:Type="String">უბანის ნომერი</Data></Cell>
+      </Row>
+    <% @call2.each do |call2| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= call2.district.dname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call2.pname %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+  <Worksheet ss:Name="ზარი3">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">ოლქის დასახლება</Data></Cell>
+        <Cell><Data ss:Type="String">უბანის ნომერი</Data></Cell>
+      </Row>
+    <% @call3.each do |call3| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= call3.district.dname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call3.pname %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+    <Worksheet ss:Name="ზარი4">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">ოლქის დასახლება</Data></Cell>
+        <Cell><Data ss:Type="String">უბანის ნომერი</Data></Cell>
+      </Row>
+    <% @call4.each do |call4| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= call4.district.dname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call4.pname %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+  <Worksheet ss:Name="ზარი5">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">ოლქის დასახლება</Data></Cell>
+        <Cell><Data ss:Type="String">უბანის ნომერი</Data></Cell>
+      </Row>
+    <% @call5.each do |call5| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= call5.district.dname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call5.pname %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+  <Worksheet ss:Name="ზარი6">
+    <Table>
+      <Row>
+        <Cell><Data ss:Type="String">ოლქის დასახლება</Data></Cell>
+        <Cell><Data ss:Type="String">უბანის ნომერი</Data></Cell>
+      </Row>
+    <% @call6.each do |call6| %>
+      <Row>
+        <Cell><Data ss:Type="String"><%= call6.district.dname %></Data></Cell>
+        <Cell><Data ss:Type="String"><%= call6.pname %></Data></Cell>
+      </Row>
+    <% end %>
+    </Table>
+  </Worksheet>
+</Workbook>

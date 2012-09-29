@@ -64,6 +64,7 @@
                     <li><%= link_to('მე-4 დარეკვა', call4s_path, :tabindex=>"-1") %></li>
                     <li><%= link_to('მე-5 დარეკვა', call5s_path, :tabindex=>"-1") %></li>
                     <li><%= link_to('მე-6 დარეკვა', call6s_path, :tabindex=>"-1") %></li>
+                    <li><%= link_to('მონავემების ექსპორთი', '/export/all.xls', :tabindex=>"-1") %></li>
                   </ul>
                 </li>
                 <li class="dropdown">
@@ -75,6 +76,7 @@
                     <li><%= link_to('მე-4 დარეკვა', '/missing_precincts/call4', :tabindex=>"-1") %></li>
                     <li><%= link_to('მე-5 დარეკვა', '/missing_precincts/call5', :tabindex=>"-1") %></li>
                     <li><%= link_to('მე-6 დარეკვა', '/missing_precincts/call6', :tabindex=>"-1") %></li>
+                    <li><%= link_to('მონავემების ექსპორთი', '/export/missing.xls', :tabindex=>"-1") %></li>
                   </ul>
                 </li>
 		          <% if user_signed_in? %>

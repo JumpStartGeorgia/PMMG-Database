@@ -7,6 +7,9 @@ class Call2 < ActiveRecord::Base
   validates :district_id, :uniqueness => {:scope => :precinct_id}
   validates :fname, :lname, :precinct_id, :district_id, :presence => true
   
+  # number of items per page for pagination
+	self.per_page = 20
+  
   def self.add_values(label)
     h = self.select(label)
     a = h.collect(&label)
