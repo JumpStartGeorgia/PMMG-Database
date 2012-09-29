@@ -16,31 +16,3 @@
   
 </ul>
 <br />
-
-<h2>უბნები, რომლებიც აკლია:</h2>
-
-<% unless @missing.empty? %>
-  <table class="table table-striped span6">
-    <thead>
-      <tr>
-        <th>საარჩევნო ოლქი</th>
-        <th>საარჩევნო უბანი</th>
-        <th>ახალი პირველის დარეკვის შექმნა</th>
-      </tr>
-    </thead>
-    <tbody>
-    <% @missing.each do |precinct| %>
-      <tr>
-        <td><%= precinct.district.dname %></td>
-        <td><%= precinct.pname %></td>
-        <td>
-          <%= link_to t('app.buttons.new'), new_call2_path, :class => 'btn btn-mini' %>
-        </td>
-      </tr>
-    <% end %>
-    </tbody>
-  </table>
-  <%= page_navigation_links @missing %>
-<% else %>
-  <h3>ამ ეტაპზე ყველა უბანი აკლია!</h3>
-<% end %>
