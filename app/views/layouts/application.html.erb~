@@ -33,26 +33,50 @@
           <%= link_to(t('app.common.app_name'), root_path,:class=>"brand font")%>
           <div class="container nav-collapse">
             <ul class="nav">
-              <li clas  s="dropdown">
-                <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">ანგარიშები<b class="caret"></b></a>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-                    <li><%= link_to('პირველი დარეკვის ანგარიში', '/summaries/call1')%></li>
-                    <li><%= link_to('მე-2 დარეკვის ანგარიში', '/summaries/call2')%></li>
-                    <li><%= link_to('მე-3 დარეკვის ანგარიში', '/summaries/call3')%></li>
-                    <li><%= link_to('მე-4 დარეკვის ანგარიში', '/summaries/call4')%></li>
-                    <li><%= link_to('მე-5 დარეკვის ანგარიში', '/summaries/call5')%></li>
-                    <li><%= link_to('მე-6 დარეკვის ანგარიში', '/summaries/call6')%></li>
+              <li class="dropdown">
+                  <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">ახალი დარეკვა<b class="caret"></b></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                      <li><%= link_to('პირველი დარეკვა', new_call1_path, :tabindex=>"-1") %></li>
+                      <li><%= link_to('მე-2 დარეკვა', new_call2_path, :tabindex=>"-1") %></li>
+                      <li><%= link_to('მე-3 დარეკვა', new_call3_path, :tabindex=>"-1") %></li>
+                      <li><%= link_to('მე-4 დარეკვა', new_call4_path, :tabindex=>"-1") %></li>
+                      <li><%= link_to('მე-5 დარეკვა', new_call5_path, :tabindex=>"-1") %></li>
+                      <li><%= link_to('მე-6 დარეკვა', new_call6_path, :tabindex=>"-1") %></li>
+                    </ul>
+                  </li>
+              <li class="dropdown">
+                <a id="drop2" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">ანგარიშები<b class="caret"></b></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+                    <li><%= link_to('პირველი დარეკვა', '/summaries/call1',  :tabindex=>"-1")%></li>
+                    <li><%= link_to('მე-2 დარეკვა', '/summaries/call2', :tabindex=>"-1")%></li>
+                    <li><%= link_to('მე-3 დარეკვა', '/summaries/call3', :tabindex=>"-1")%></li>
+                    <li><%= link_to('მე-4 დარეკვა', '/summaries/call4', :tabindex=>"-1")%></li>
+                    <li><%= link_to('მე-5 დარეკვა', '/summaries/call5', :tabindex=>"-1")%></li>
+                    <li><%= link_to('მე-6 დარეკვა', '/summaries/call6', :tabindex=>"-1")%></li>
                   </ul>
                 </li>
                 <li class="dropdown">
-                <a id="drop1" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">ახალი დარეკვა<b class="caret"></b></a>
-                  <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
-                    <li><%= link_to('პირველი დარეკვა', new_call1_path(@call1), :tabindex=>"-1") %></li>
-                    <li><%= link_to('მე-2 დარეკვა', new_call2_path(@call2), :tabindex=>"-1") %></li>
-                    <li><%= link_to('მე-3 დარეკვა', new_call3_path(@call3), :tabindex=>"-1") %></li>
-                    <li><%= link_to('მე-4 დარეკვა', new_call4_path(@call4), :tabindex=>"-1") %></li>
-                    <li><%= link_to('მე-5 დარეკვა', new_call5_path(@call5), :tabindex=>"-1") %></li>
-                    <li><%= link_to('მე-6 დარეკვა', new_call6_path(@call6), :tabindex=>"-1") %></li>
+                <a id="drop3" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">დარეკვის სიები<b class="caret"></b></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+                    <li><%= link_to('პირველი დარეკვა', call1s_path, :tabindex=>"-1") %></li>
+                    <li><%= link_to('მე-2 დარეკვა', call2s_path, :tabindex=>"-1") %></li>
+                    <li><%= link_to('მე-3 დარეკვა', call3s_path, :tabindex=>"-1") %></li>
+                    <li><%= link_to('მე-4 დარეკვა', call4s_path, :tabindex=>"-1") %></li>
+                    <li><%= link_to('მე-5 დარეკვა', call5s_path, :tabindex=>"-1") %></li>
+                    <li><%= link_to('მე-6 დარეკვა', call6s_path, :tabindex=>"-1") %></li>
+                    <li><%= link_to('მონავემების ექსპორთი (XLS)', '/export/all.xls', :tabindex=>"-1") %></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                <a id="drop4" href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">უბნების სია<b class="caret"></b></a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="drop4">
+                    <li><%= link_to('პირველი დარეკვა', '/missing_precincts/call1', :tabindex=>"-1") %></li>
+                    <li><%= link_to('მე-2 დარეკვა', '/missing_precincts/call2', :tabindex=>"-1") %></li>
+                    <li><%= link_to('მე-3 დარეკვა', '/missing_precincts/call3', :tabindex=>"-1") %></li>
+                    <li><%= link_to('მე-4 დარეკვა', '/missing_precincts/call4', :tabindex=>"-1") %></li>
+                    <li><%= link_to('მე-5 დარეკვა', '/missing_precincts/call5', :tabindex=>"-1") %></li>
+                    <li><%= link_to('მე-6 დარეკვა', '/missing_precincts/call6', :tabindex=>"-1") %></li>
+                    <li><%= link_to('მონავემების ექსპორთი (XLS)', '/export/missing.xls', :tabindex=>"-1") %></li>
                   </ul>
                 </li>
 		          <% if user_signed_in? %>
@@ -62,7 +86,7 @@
 				                <b class="caret"></b>
 				          </a>
 				          <ul class="dropdown-menu">
-										<% if current_user.role?(User::ROLES[:user_manager]) %>
+										<% if current_user.role?(User::ROLES[1]) %>
 								      <li>
 					 		         <%= link_to t('.admin'), admin_path %>
 											</li>

@@ -5,7 +5,9 @@
 
  *= require formtastic
  *= require formtastic-bootstrap
- *= require_tree .
+ *= require bootstrap_and_overrides
+ *= require scaffolds
+ *= require summaries
  *= require_self
 */
 
