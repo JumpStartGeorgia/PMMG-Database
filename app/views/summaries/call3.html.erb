@@ -4,7 +4,7 @@
 
 <ul class="standard">
   <li>მთლიანი რაოდენობა უბნებისა, სადაც დაკვირვება განხორციელდა: <%= @total_precincts.length %></li>
-  <li>უბნების რაოდენობა, საიდანაც განხორციელდა ანგარიშგება: <%= @precincts.length %></li>
+  <li>უბნების რაოდენობა, საიდანაც განხორციელდა ანგარიშგება: <%= @precincts.length unless @precincts.length == 0 %></li>
   <li>უბნების პროცენტული რაოდენობა, საიდანაც განხორციელდა ანგარიშგება: <%= number_to_percentage(@precincts.length.to_f / @total_precincts.length) %></li>
 </ul>
 <br />

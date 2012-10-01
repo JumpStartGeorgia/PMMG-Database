@@ -4,7 +4,7 @@
 
 <ul class="standard">
   <li>მთლიანი რაოდენობა უბნებისა, სადაც დაკვირვება განხორციელდა: <%= @total_precincts.length %></li>
-  <li>უბნების რაოდენობა, საიდანაც განხორციელდა ანგარიშგება: <%= @precincts.length %> precincts</li>
+  <li>უბნების რაოდენობა, საიდანაც განხორციელდა ანგარიშგება: <%= @precincts.length unless @precincts.length == 0 %></li>
   <li>უბნების პროცენტული რაოდენობა, საიდანაც განხორციელდა ანგარიშგება: <%= number_to_percentage(@precincts.length.to_f / @total_precincts.length) %></li>
 </ul>
 <br />
@@ -12,7 +12,7 @@
 <h2>დეტალური ინფორმაცია</h2>
 
 <ul class="standard">
-  <li>ხომ არ შეგეზღუდათ დაკვირვების უფლება საარჩევნო უბნის მუშაობის რომელიმე ეტაპზე: მოსამზადებელი, ხმის მიცემისა და დათვლის პროცესის დროს?: <%= number_to_percentage(@restrictions / @precincts.length) %></li>
-  <li>ხომ არ შეფერხდა მოსამზადებელი, ხმის მიცემის ან დათვლის პროცესი?: <%= number_to_percentage(@restrictions.to_f / @precincts.length) %></li>
+  <li>ხომ არ შეგეზღუდათ დაკვირვების უფლება საარჩევნო უბნის მუშაობის რომელიმე ეტაპზე: მოსამზადებელი, ხმის მიცემისა და დათვლის პროცესის დროს?: <%= number_to_percentage(@restrictions / @precincts.length) unless @precincts.length == 0 %></li>
+  <li>ხომ არ შეფერხდა მოსამზადებელი, ხმის მიცემის ან დათვლის პროცესი?: <%= number_to_percentage(@restrictions.to_f / @precincts.length) unless @precincts.length == 0 %></li>
 </ul>
 <br />

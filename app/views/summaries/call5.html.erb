@@ -4,7 +4,7 @@
 
 <ul class="standard">
   <li>მთლიანი რაოდენობა უბნებისა, სადაც დაკვირვება განხორციელდა: <%= @total_precincts.length %></li>
-  <li>უბნების რაოდენობა, საიდანაც განხორციელდა ანგარიშგება: <%= @precincts.length %></li>
+  <li>უბნების რაოდენობა, საიდანაც განხორციელდა ანგარიშგება: <%= @precincts.length unless @precincts.length == 0 %></li>
   <li>უბნების პროცენტული რაოდენობა, საიდანაც განხორციელდა ანგარიშგება: <%= number_to_percentage(@precincts.length.to_f / @total_precincts.length) %></li>
 </ul>
 <br />
@@ -14,42 +14,42 @@
 <ul class="standard">
   <li>მისცეს თუ არა ხმის მიცემის შესაძლებლობა იმ ამომრჩევლებს, რომლებიც 20:00 საათისთვის რიგში იდგნენ?
     <ul>
-      <li>დიახ: <%= number_to_percentage(@in_lin_vote_one.to_f / @precincts.length) %></li>
+      <li>დიახ: <%= number_to_percentage(@in_lin_vote_one.to_f / @precincts.length) unless @precincts.length == 0 %></li>
     </ul>
   </li>
   <li>მისცეს თუ არა ხმის მიცემის შესაძლებლობა იმ ამომრჩევლებს, რომლებიც უბანზე მოვიდნენ 20:00 საათის შემდეგ?
     <ul>
-      <li>დიახ: <%= number_to_percentage(@after8vote_one.to_f / @precincts.length) %></li>
+      <li>დიახ: <%= number_to_percentage(@after8vote_one.to_f / @precincts.length) unless @precincts.length == 0 %></li>
     </ul>
   </li>
   <li>უბნის დახურვის შემდეგ იმყოფებოდა თუ არა უბანზე არაუფლებამოსილი პირი?
     <ul>
-      <li>დიახ: <%= number_to_percentage(@unauth_close_one.to_f / @precincts.length) %></li>
+      <li>დიახ: <%= number_to_percentage(@unauth_close_one.to_f / @precincts.length) unless @precincts.length == 0 %></li>
     </ul>
   </li>
   <li>დაიცვეს თუ არა საარჩევნო კომისიის წევრებმა ხმების დათვლის კანონით გაწერილი პროცედურები?
     <ul>
-      <li>დიახ: <%= number_to_percentage(@elcomm_abide_one.to_f / @precincts.length) %></li></li>
+      <li>დიახ: <%= number_to_percentage(@elcomm_abide_one.to_f / @precincts.length) unless @precincts.length == 0 %></li></li>
     </ul>
   </li>
   <li>ცდილობდა თუ არა ვინმე ბიულეტენების დათვლის პროცესზე გავლენის მოხდენას?
     <ul>
-      <li>დიახ: <%= number_to_percentage(@inf_ball_count_one.to_f / @precincts.length) %></li>
+      <li>დიახ: <%= number_to_percentage(@inf_ball_count_one.to_f / @precincts.length) unless @precincts.length == 0 %></li>
     </ul>
   </li>
   <li>გამოაცხადა თუ არა კომისიის თავმჯდომარემ ყოველი სუბიექტისათვის მიცემული ხმათა რაოდენობის შესახებ?
     <ul>
-      <li>დიახ: <%= number_to_percentage(@chair_announce_one.to_f / @precincts.length) %></li>
+      <li>დიახ: <%= number_to_percentage(@chair_announce_one.to_f / @precincts.length) unless @precincts.length == 0 %></li>
     </ul>
   </li>
   <li>დაუყოვნებლივ შეიტანეს თუ არა ეს მონაცემები სადემონსტრაციო ოქმში?
     <ul>
-      <li>დიახ: <%= number_to_percentage(@data_n_proto_one.to_f / @precincts.length) %></li>
+      <li>დიახ: <%= number_to_percentage(@data_n_proto_one.to_f / @precincts.length) unless @precincts.length == 0 %></li>
     </ul>
   </li>
   <li>გადმოგეცათ თუ არა შემაჯამებელი ოქმის ასლი დამოწმებული ბეჭდითა და ხელმოწერით?
     <ul>
-      <li>დიახ: <%= number_to_percentage(@cp_proto_stamp.to_f / @precincts.length) %></li>
+      <li>დიახ: <%= number_to_percentage(@cp_proto_stamp.to_f / @precincts.length) unless @precincts.length == 0 %></li>
     </ul>
   </li>
 </ul>
