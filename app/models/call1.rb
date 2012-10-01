@@ -14,8 +14,12 @@ class Call1 < ActiveRecord::Base
   
   def self.add_values(label)
     h = self.select(label)
+    h = h.delete_if { |k,v| v.nil?}
     a = h.collect(&label)
-    return a.inject{|sum, x| sum + x }
+    if a && !a.empty? 
+      return a.inject{|sum, x| sum + x }
+    end
+    return ''  
   end
   
   def self.times_true(label)
