@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 20120927162304) do
     t.string   "fname"
     t.string   "lname"
     t.string   "district_id"
+    t.string   "precinct_id"
     t.boolean  "c_label"
     t.integer  "d_label"
     t.integer  "e_label"
@@ -26,7 +27,6 @@ ActiveRecord::Schema.define(:version => 20120927162304) do
     t.string   "k_label"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "precinct_id"
   end
 
   create_table "call2s", :force => true do |t|

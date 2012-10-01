@@ -3,31 +3,58 @@
   <h1><%= t('call1.form.edit.title') %></h1>
 </div>
 
-<dl class="dl-horizontal">
-  <dt><strong>სახელი:</strong></dt>
-  <dd><%= @call1.fname %></dd>
-  <dt><strong>გვარი:</strong></dt>
-  <dd><%= @call1.lname %></dd>
-  <dt><strong>ოლქი:</strong></dt>
-  <dd><%= @call1.district.dname %></dd>
-  <dt><strong>უბანი:</strong></dt>
-  <dd><%= @call1.precinct.pname %></dd>
-  <dt><strong>C:</strong></dt>
-  <dd><%= if @call1.c_label == true then 'დიახ' else 'არა' end %></dd>
-  <dt><strong>D:</strong></dt>
-  <dd><%= @call1.d_label %></dd>
-  <dt><strong>E:</strong></dt>
-  <dd><%= @call1.e_label %></dd>
-  <dt><strong>F:</strong></dt>
-  <dd><%= @call1.f_label %></dd>
-  <dt><strong>G:</strong></dt>
-  <dd><%= if @call1.g_label == true then 'დიახ' else 'არა' end %></dd>
-  <dt><strong>H:</strong></dt>
-  <dd><%= if @call1.h_label == true then 'დიახ' else 'არა' end %></dd>
-  <dt><strong>K:</strong></dt>
-  <dd><%= if @call1.k_label == true then 'დიახ' else 'არა' end %></dd>
-</dl>
+<div class="row span9">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td>სახელი</td>
+        <td><%= @call1.fname %></td>
+      </tr>
+      <tr>
+        <td>გვარი</td>
+        <td><%= @call1.lname %></td>
+      </tr>
+      <tr>
+        <td>ოლქი</td>
+        <td><%= @call1.district.dname %></td>
+      </tr>
+      <tr>
+        <td>უბანი</td>
+        <td><%= @call1.precinct.pname %></td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td><%= yn_label(@call1.c_label) %></td>
+      </tr>
+      <tr>
+        <td>D</td>
+        <td><%= yn_label(@call1.d_label) %></td>
+      </tr>
+      <tr>
+        <td>E</td>
+        <td><%= yn_label(@call1.e_label) %></td>
+      </tr>      
+      <tr>
+        <td>F</td>
+        <td><%= yn_label(@call1.f_label) %></td>
+      </tr>
+      <tr>
+        <td>G</td>
+        <td><%= yn_label(@call1.g_label) %></td>
+      </tr>
+      <tr>
+        <td>H</td>
+        <td><%= yn_label(@call1.h_label) %></td>
+      </tr>
+      <tr>
+        <td>K</td>
+        <td><%= yn_label(@call1.k_label) %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
+<dl class="dl-horizontal">
 <div class="form-actions">
   <%= link_to t('app.buttons.back'),
               call1s_path, :class => 'btn'  %>

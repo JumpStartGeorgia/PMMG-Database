@@ -1,5 +1,20 @@
 BootstrapStarter::Application.routes.draw do
 
+  get "export/missing"
+  get "export/all"
+
+  get "missing_precincts/call1"
+
+  get "missing_precincts/call2"
+
+  get "missing_precincts/call3"
+
+  get "missing_precincts/call4"
+
+  get "missing_precincts/call5"
+
+  get "missing_precincts/call6"
+
   get "summaries/call1"
   get "summaries/call2"
   get "summaries/call3"

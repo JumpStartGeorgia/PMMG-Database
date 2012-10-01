@@ -2,6 +2,8 @@
 ka:
   activerecord:
     models:
+      district: ოლქი
+      precinct: უბანი
       call1: პირველი დარეკვა
       call2: მე-2 დარეკვა
       call3: მე-3 დარეკვა
@@ -9,6 +11,10 @@ ka:
       call5: მე-5 დარეკვა
       call6: მე-6 დარეკვა
     attributes:
+      district:
+        dname: ოლქი
+      precinct:
+        pname: უბანი
       call1:
         fname: სახელი
         lname: გვარი

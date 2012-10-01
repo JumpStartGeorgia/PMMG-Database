@@ -3,20 +3,36 @@
   <h1>მე-6 დარეკვა</h1>
 </div>
 
-<dl class="dl-horizontal">
-  <dt><strong>სახელი:</strong></dt>
-  <dd><%= @call6.fname %></dd>
-  <dt><strong>გვარი:</strong></dt>
-  <dd><%= @call6.lname %></dd>
-  <dt><strong>ოლქი:</strong></dt>
-  <dd><%= @call6.district.dname %></dd>
-  <dt><strong>უბანი:</strong></dt>
-  <dd><%= @call6.precinct.pname %></dd>
-  <dt><strong>A:</strong></dt>
-  <dd><%= @call6.label_a %></dd>
-  <dt><strong>B:</strong></dt>
-  <dd><%= @call6.label_b %></dd>
-</dl>
+<div class="row span9">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td>სახელი</td>
+        <td><%= @call6.fname %></td>
+      </tr>
+      <tr>
+        <td>გვარი</td>
+        <td><%= @call6.lname %></td>
+      </tr>
+      <tr>
+        <td>ოლქი</td>
+        <td><%= @call6.district.dname %></td>
+      </tr>
+      <tr>
+        <td>უბანი</td>
+        <td><%= @call6.precinct.pname %></td>
+      </tr>
+      <tr>
+        <td>A</td>
+        <td><%= yn_label(@call6.label_a) %></td>
+      </tr
+      <tr>
+        <td>B</td>
+        <td><%= yn_label(@call6.label_b) %></td>
+      </tr
+    </tbody>
+  </table>
+</div>
 
 <div class="form-actions">
   <%= link_to t('app.buttons.back'),

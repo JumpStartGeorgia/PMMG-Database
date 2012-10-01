@@ -3,46 +3,88 @@
   <h1>მე-4 დარეკვა</h1>
 </div>
 
-<dl class="dl-horizontal">
-  <dt><strong>სახელი:</strong></dt>
-  <dd><%= @call4.fname %></dd>
-  <dt><strong>გვარი:</strong></dt>
-  <dd><%= @call4.lname %></dd>
-  <dt><strong>ოლქი:</strong></dt>
-  <dd><%= @call4.district.dname %></dd>
-  <dt><strong>უბანი:</strong></dt>
-  <dd><%= @call4.precinct.pname %></dd>
-  <dt><strong>N:</strong></dt>
-  <dd><%= @call4.label_n %></dd>
-  <dt><strong>P:</strong></dt>
-  <dd><%= @call4.label_p %></dd>
-  <dt><strong>Q:</strong></dt>
-  <dd><%= @call4.label_q %></dd>
-  <dt><strong>R:</strong></dt>
-  <dd><%= @call4.label_r %></dd>
-  <dt><strong>S:</strong></dt>
-  <dd><%= @call4.label_s %></dd>
-  <dt><strong>T:</strong></dt>
-  <dd><%= @call4.label_t %></dd>
-  <dt><strong>U:</strong></dt>
-  <dd><%= @call4.label_u %></dd>
-  <dt><strong>Z:</strong></dt>
-  <dd><%= @call4.label_z %></dd>
-  <dt><strong>AB:</strong></dt>
-  <dd><%= @call4.label_ab %></dd>
-  <dt><strong>AC:</strong></dt>
-  <dd><%= @call4.label_ac %></dd>
-  <dt><strong>AD:</strong></dt>
-  <dd><%= @call4.label_ad %></dd>
-  <dt><strong>AF:</strong></dt>
-  <dd><%= @call4.label_af %></dd>
-  <dt><strong>AG:</strong></dt>
-  <dd><%= @call4.label_ag %></dd>
-  <dt><strong>AH:</strong></dt>
-  <dd><%= @call4.label_ah %></dd>
-  <dt><strong>AK:</strong></dt>
-  <dd><%= @call4.label_ak %></dd>
-</dl>
+<div class="row span9">
+  <table class="table table-striped">
+    <tbody>
+      <tr>
+        <td>სახელი</td>
+        <td><%= @call4.fname %></td>
+      </tr>
+      <tr>
+        <td>გვარი</td>
+        <td><%= @call4.lname %></td>
+      </tr>
+      <tr>
+        <td>ოლქი</td>
+        <td><%= @call4.district.dname %></td>
+      </tr>
+      <tr>
+        <td>უბანი</td>
+        <td><%= @call4.precinct.pname %></td>
+      </tr>
+      <tr>
+        <td>N</td>
+        <td><%= n_label(@call4.label_n) %></td>
+      </tr>
+      <tr>
+        <td>P</td>
+        <td><%= p_label(@call4.label_p) %></td>
+      </tr>
+      <tr>
+        <td>Q</td>
+        <td><%= q_label(@call4.label_q) %></td>
+      </tr>
+            <tr>
+        <td>R</td>
+        <td><%= r_label(@call4.label_r) %></td>
+      </tr>
+      <tr>
+        <td>S</td>
+        <td><%= s_label(@call4.label_s) %></td>
+      </tr>
+      <tr>
+        <td>T</td>
+        <td><%= t_label(@call4.label_t) %></td>
+      </tr>
+      <tr>
+        <td>U</td>
+        <td><%= u_label(@call4.label_u) %></td>
+      </tr>
+      <tr>
+        <td>Z</td>
+        <td><%= z_label(@call4.label_z) %></td>
+      </tr>
+      <tr>
+        <td>AB</td>
+        <td><%= ab_label(@call4.label_ab) %></td>
+      </tr>
+      <tr>
+        <td>AC</td>
+        <td><%= ac_label(@call4.label_ac) %></td>
+      </tr>
+      <tr>
+        <td>AD</td>
+        <td><%= yn_label(@call4.label_ad) %></td>
+      </tr>
+      <tr>
+        <td>AF</td>
+        <td><%= yn_label(@call4.label_af) %></td>
+      </tr>
+      <tr>
+        <td>AG</td>
+        <td><%= yn_label(@call4.label_ag) %></td>
+      </tr>
+      <tr>
+        <td>AH</td>
+        <td><%= yn_label(@call4.label_ah) %></td>
+      </tr>
+      <tr>
+        <td>AK</td>
+        <td><%= ak_label(@call4.label_ak) %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <div class="form-actions">
   <%= link_to t('app.buttons.back'),

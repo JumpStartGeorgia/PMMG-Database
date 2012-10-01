@@ -3,7 +3,7 @@ class Call5sController < ApplicationController
   # GET /call5s
   # GET /call5s.json
   def index
-    @call5s = Call5.all
+    @call5s = Call5.all.paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

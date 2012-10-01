@@ -10,6 +10,9 @@ class Call3 < ActiveRecord::Base
   belongs_to :district
   belongs_to :precinct
   
+  # number of items per page for pagination
+	self.per_page = 20
+	
   def self.add_values(label)
     h = self.select(label)
     a = h.collect(&label)
