@@ -37,7 +37,10 @@ BootstrapStarter::Application.routes.draw do
 		resources :users
 	end
 
-
+  devise_for :users
+  devise_scope :user do
+    get '/users/sign_out' => 'devise/sessions#destroy'
+  end
 
 	root :to => 'pages#home'
 
