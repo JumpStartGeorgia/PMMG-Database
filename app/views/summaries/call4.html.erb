@@ -4,7 +4,7 @@
 
 <ul class="standard">
   <li>მთლიანი რაოდენობა უბნებისა, სადაც დაკვირვება განხორციელდა: <%= @total_precincts.length %></li>
-  <li>უბნების რაოდენობა, საიდანაც განხორციელდა ანგარიშგება: <%= @precincts.length unless @precincts.length == 0 %> precincts</li>
+  <li>უბნების რაოდენობა, საიდანაც განხორციელდა ანგარიშგება: <%= @precincts.length unless @precincts.length == 0 %></li>
   <li>უბნების პროცენტული რაოდენობა, საიდანაც განხორციელდა ანგარიშგება: <%= number_to_percentage(@precincts.length.to_f / @total_precincts.length) %></li>
 </ul>
 <br />
@@ -71,7 +71,7 @@
   <li>ჰქონდა თუ არა ადგილი შემთხვევებს, როდესაც ამომრჩეველი იღებდა ბიულეტენს წინასწარ გაკეთებული წარწერით ან რაიმე ნიშნით?
     <ul>
       <li>არასოდეს: <%= number_to_percentage(@dirty_ballot_one.to_f / @precincts.length) unless @precincts.length == 0 %></li>
-      <li>1-4 შემთხვევა: <%= number_to_percentage(@dirty_ballot_two.to_f / @precincts.length) %></li>
+      <li>1-4 შემთხვევა: <%= number_to_percentage(@dirty_ballot_two.to_f / @precincts.length) unless @precincts.length == 0 %></li>
       <li>5-20 შემთხვევა: <%= number_to_percentage(@dirty_ballot_three.to_f / @precincts.length) unless @precincts.length == 0 %></li>
       <li>20-ზე მეტი შემთხვევა: <%= number_to_percentage(@dirty_ballot_four.to_f / @precincts.length) unless @precincts.length == 0 %></li>
     </ul>
