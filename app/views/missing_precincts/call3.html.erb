@@ -14,7 +14,7 @@
     <tbody>
     <% @missing.each do |precinct| %>
       <tr>
-        <td><%= precinct.district.dname %></td>
+        <td><%= precinct.district.dname unless precinct.district.nil? || precinct.district.dname.nil? %></td>
         <td><%= precinct.pname %></td>
         <td>
           <%= link_to t('app.buttons.new'), new_call1_path, :class => 'btn btn-mini' %>

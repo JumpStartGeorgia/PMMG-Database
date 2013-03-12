@@ -11,13 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120927162304) do
+ActiveRecord::Schema.define(:version => 20130312130308) do
 
   create_table "call1s", :force => true do |t|
     t.string   "fname"
     t.string   "lname"
     t.string   "district_id"
-    t.string   "precinct_id"
     t.boolean  "c_label"
     t.integer  "d_label"
     t.integer  "e_label"
@@ -27,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20120927162304) do
     t.string   "k_label"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "precinct_id"
   end
 
   create_table "call2s", :force => true do |t|
